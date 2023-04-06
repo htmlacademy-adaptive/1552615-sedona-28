@@ -1,12 +1,150 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Седона</title>
+</head>
 
-  </body>
+<body class="page-body">
+  <header class="header">
+    <nav class="header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            <span class="nav__text">Главная</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="./catalog.html" class="nav__link">
+            <span class="nav__text">Фото и видео</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link nav__link--logo">
+            <img src="./img/icons/logo.svg" alt="Логотип Седоны" class="nav__logo">
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="./form.html" class="nav__link">
+            <span class="nav__text">Форма отзыва</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            <span class="nav__text">HTML Academy</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <h1 class="visually-hidden"></h1>
+
+    <section class="intro">
+      <div class="intro__wrapper">
+        <img src="" alt="" class="intro__background">
+      </div>
+    </section>
+
+    <section class="advantages">
+      <header class="advantages__header">
+        <h2 class="visually-hidden">Преимущества Седоны над Гранд Каньоном</h2>
+        <p class="advantages__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p class="advantages__slogan">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      </header>
+      <ul class="advantages__list">
+        <li class="advantages__item advantage advantages--xl">
+          <h3 class="advantage__title">Настоящий городок</h3>
+          <span class="advantage__number">№1</span>
+          <p class="advantage__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <ul class="advantage__list">
+            <li class="advantage__item">
+              <h4 class="advantage__item-title">Жилье</h4>
+              <p class="advantage__item-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </li>
+            <li class="advantage__item">
+              <h4 class="advantage__item-title">Еда</h4>
+              <p class="advantage__item-text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+            </li>
+            <li class="advantage__item">
+              <h4 class="advantage__item-title">Сувениры</h4>
+              <p class="advantage__item-text">Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
+        </li>
+        <li class="advantages__item advantage advantages__item--xl">
+          <h3 class="advantage__title">Там есть мост дьявола</h3>
+          <span class="advantage__number">2</span>
+          <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+        </li>
+        <li class="advantages__item advantage">
+          <h3 class="advantage__title">Небольшая площадь</h3>
+          <span class="advantage__number">3</span>
+          <p class="advantage__text">Все интересные места находятся близко</p>
+        </li>
+        <li class="advantages__item advantage">
+          <h3 class="advantage__title">Красивая дорога</h3>
+          <span class="advantage__number">4</span>
+          <p class="advantage__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </li>
+        <li class="advantages__item advantage">
+          <h3 class="advantage__title">Мало туристов</h3>
+          <span class="advantage__number">5</span>
+          <p class="advantage__text">Большинство едет в Гранд Каньон и толпится там</p>
+        </li>
+      </ul>
+    </section>
+    <section class="search">
+      <h3 class="search__title">Заинтересовались?</h3>
+      <p class="search__text">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне
+      </p>
+      <a href="" class="search__button">Найти гостиницу</a>
+      <div class="search__map-wrapper">
+        <img src="#" alt="Карта Седоны" class="search__map">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__list">
+      <li class="footer__item">
+        <p class="footer__hashtag">#visitSEDONA</p>
+      </li>
+      <li class="footer__item socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a href="" class="socials__link">
+              <span class="socials__text visually-hidden">Вконтакте</span>
+              <img src="./img/icons/vk.svg" alt="Вконтакте" class="socials__logo">
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="" class="socials__link">
+              <span class="socials__text visually-hidden">Telegram</span>
+              <img src="./img/icons/telegram.svg" alt="Телеграм" class="socials__logo">
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="" class="socials__link">
+              <span class="socials__text visually-hidden">Youtube</span>
+              <img src="./img/icons/youtube.svg" alt="Youtube" class="socials__logo">
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="footer__item developer">
+        <a href="" class="developer__link">
+          <span class="developer__text"></span>
+          <img src="" alt="" class="developer__logo">
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+</body>
+
 </html>
