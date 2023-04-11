@@ -1,0 +1,14 @@
+.label {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  &--checkbox {
+    font-family: "PTSans Bold", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+    font-weight: bold;
+  }
+}
