@@ -1,1 +1,40 @@
-// Начните писать стили здесь
+//Глобальные стили, шрифты, миксины и переменные
+@import "./global/fonts.scss";
+@import "./global/global.scss";
+@import "./global/variables.scss";
+@import "./mixins.scss";
+
+// Общие блоки
+@import "./blocks/title.scss";
+@import "./blocks/button.scss";
+@import "./blocks/description.scss";
+@import "./blocks/page-body.scss";
+@import "./blocks/main-container.scss";
+@import "./blocks/container.scss";
+@import "./blocks/intro.scss";
+
+// Стили Header
+@import "./blocks/header/header.scss";
+@import "./blocks/header/nav.scss";
+
+// Стили Footer
+@import "./blocks/footer/footer.scss";
+@import "./blocks/footer/socials.scss";
+@import "./blocks/footer/developer.scss";
+
+// Стили для главной страницы index.html
+@import "./blocks/index/advantages.scss";
+@import "./blocks/index/advantage.scss";
+@import "./blocks/index/search.scss";
+
+// Стили для страницы каталога catalog.html
+@import "./blocks/catalog/photos.scss";
+@import "./blocks/catalog/photo.scss";
+@import "./blocks/catalog/presentation.scss";
+
+// Стили для страницы формы отзыва form.html
+@import "./blocks/form/review.scss";
+@import "./blocks/form/form.scss";
+@import "./blocks/form/modal.scss";
+@import "./blocks/form/label.scss";
+@import "./blocks/form/input.scss";

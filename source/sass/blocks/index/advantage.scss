@@ -1,0 +1,14 @@
+.advantage {
+  background-color: $grey;
+
+  &--xl {
+    background-color: $grey-blue;
+    color: $white;
+  }
+}
+
+.advantage__list {
+  @include list-reset;
+  background-color: $white;
+  color: $black;
+}

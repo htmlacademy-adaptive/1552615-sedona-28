@@ -5,22 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Форма</title>
 </head>
 
-<body>
+<body class="page-body">
 
-  <header class="header">
-    <nav class="header__nav nav">
+  <header class="header container">
+    <nav class="header__nav nav ">
       <ul class="nav__list">
         <li class="nav__item">
           <a href="./index.html" class="nav__link">
-            <span class="nav__text">Главная</span>
+            <span class="nav__text title">Главная</span>
           </a>
         </li>
         <li class="nav__item">
           <a href="./catalog.html" class="nav__link">
-            <span class="nav__text">Фото и видео</span>
+            <span class="nav__text title">Фото и видео</span>
           </a>
         </li>
         <li class="nav__item">
@@ -30,26 +31,30 @@
         </li>
         <li class="nav__item">
           <a href="#" class="nav__link">
-            <span class="nav__text">Форма отзыва</span>
+            <span class="nav__text title">Форма отзыва</span>
           </a>
         </li>
         <li class="nav__item">
           <a href="#" class="nav__link">
-            <span class="nav__text">HTML Academy</span>
+            <span class="nav__text title">HTML Academy</span>
           </a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main class="main-container">
+  <main class="main-container container">
     <h1 class="visually-hidden">Форма отзыва</h1>
-    <section class="review">
+    <section class="intro container">
+      <img src="./img/icons/SEDONA.svg" alt="" class="intro__icon">
+    </section>
+
+    <section class="review container">
       <h2 class="review__title title">Оставьте свой отзыв</h2>
       <p class="review__intro description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
         вами достопримечательностях</p>
       <form action="#" class="review__form form">
-        <fieldset class="form__section">
+        <fieldset class="form__section container">
           <h3 class="form__title title">Представьтесь:</h3>
           <label for="first-name" class="form__label label">
             Имя*:
@@ -57,28 +62,28 @@
           </label>
           <label for="last-name" class="form__label label">
             Фамилия*:
-            <input type="text" class="form__input input" id="last-name" name="last-name" value="Пётр">
+            <input type="text" class="form__input input" id="last-name" name="last-name" value="Пустота">
           </label>
           <label for="surname" class="form__label label">
             Отчество:
-            <input type="text" class="form__input input" id="surname" name="surname" value="Пётр">
+            <input type="text" class="form__input input" id="surname" name="surname" value="Викторович">
           </label>
         </fieldset>
 
-        <fieldset class="form__section">
+        <fieldset class="form__section container">
           <h3 class="form__title title">Контактная информация:</h3>
           <label for="phone" class="form__label label">
             Контактный телефон*:
-            <input type="text" class="form__input input input--contacts" id="phone" name="phone" placeholder="Введите телефон">
+            <input type="text" class="form__input input input--phone" id="phone" name="phone" placeholder="Введите телефон">
           </label>
           <label for="email" class="form__label label">
             Электронная почта*:
-            <input type="email" class="form__input input input--contacts" id="email" name="email" placeholder="Введите e-mail">
+            <input type="email" class="form__input input input--email" id="email" name="email" placeholder="Введите e-mail">
           </label>
         </fieldset>
 
-        <fieldset class="form__section">
-          <h3 class="form__title">Ваше общее впечатление:</h3>
+        <fieldset class="form__section container">
+          <h3 class="form__title title">Ваше общее впечатление:</h3>
           <label for="good" class="form__label label label--checkbox">
             <input type="radio" class="form__input input input--radio" id="good" name="good" checked>
             Скорее положительное
@@ -93,8 +98,8 @@
           </label>
         </fieldset>
 
-        <fieldset class="form__section">
-          <h3 class="form__title">Посещенные достопримечательности:</h3>
+        <fieldset class="form__section container">
+          <h3 class="form__title title">Посещенные достопримечательности:</h3>
           <label for="bridge" class="form__label label label--checkbox">
             <input type="checkbox" class="form__input input input--checkbox" id="bridge" name="bridge" checked>
             Мост дьявола
@@ -113,9 +118,12 @@
           </label>
         </fieldset>
 
-        <fieldset class="form__section">
-          <h3 class="form__title">Опишите свои эмоции:</h3>
-          <textarea classname="form__textarea" name="emotions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+        <fieldset class="form__section container">
+          <h3 class="form__title title">Опишите свои эмоции:</h3>
+          <label for="emotions" class="form__label">
+            <span class="visually-hidden">Форма для описания эмоций</span>
+            <textarea classname="form__textarea input" name="emotions" id="emotions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+          </label>
         </fieldset>
 
         <input type="submit" class="form__button button">
@@ -123,20 +131,20 @@
       </form>
     </section>
 
-    <section class="modal modal--failed">
+    <section class="modal modal--failed container">
       <div class="modal__overlay">
-        <div class="modal__wrapper">
-          <h2 class="modal__title">Что-то пошло не так!</h2>
+        <div class="modal__wrapper container">
+          <h2 class="modal__title title">Что-то пошло не так!</h2>
           <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
           <button class="modal__button button button--failed-modal">Ок</button>
         </div>
       </div>
     </section>
 
-    <section class="modal modal--success">
+    <section class="modal modal--success ">
       <div class="modal__overlay">
-        <div class="modal__wrapper">
-          <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+        <div class="modal__wrapper container">
+          <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
           <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.</p>
           <button class="modal__button button button--success-modal">Закрыть окно</button>
         </div>
@@ -144,7 +152,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer container">
     <ul class="footer__list">
       <li class="footer__item">
         <p class="footer__hashtag title">#visitSEDONA</p>
