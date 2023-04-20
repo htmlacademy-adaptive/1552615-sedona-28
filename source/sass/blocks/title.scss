@@ -1,10 +1,13 @@
 .title {
   font-family: "PT Sans Bold", "Arial", sans-serif;
-  font-stretch: condensed;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 
   &--big {
     font-size: 21px;

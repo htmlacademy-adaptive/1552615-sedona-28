@@ -3,13 +3,24 @@
   height: 55px;
   background-color: $grey-blue;
   border-bottom: $menu-border-grey;
-  visibility: hidden;
+
+  @media (min-width: $tablet-width) {
+    max-width: 153px;
+    height: 56px;
+    background: $white;
+  }
 
   &--logo {
     position: absolute;
     order: 0;
     background-color: $white;
-    visibility: hidden;
+
+    @media (min-width: $tablet-width) {
+      position: static;
+      background-color: transparent;
+      width: 153px;
+      z-index: 100;
+    }
   }
 }
 
@@ -22,8 +33,20 @@
   justify-content: center;
   align-items: center;
 
-  &--logo {
-    outline: 5px solid rgba(0, 255, 0, 0.8);
-    outline-offset: -5px;
+  @media (min-width: $tablet-width) {
+    color: $black;
   }
+
+  &--acitve {
+    @media (min-width: $tablet-width) {
+      color: $active-nav;
+    }
+  }
+}
+
+.nav-item__text {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
 }

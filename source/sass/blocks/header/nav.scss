@@ -2,6 +2,10 @@
   width: 320px;
   height: 56px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .nav__button {
@@ -12,6 +16,10 @@
   width: 55px;
   background: url("../../../img/icons/icon-cross.svg") center center no-repeat;
   fill: $white;
+
+  @media (min-width: $tablet-width) {
+    visibility: hidden;
+  }
 }
 
 .nav__list {
@@ -22,5 +30,9 @@
   grid-template-columns: 1fr;
   top: 0;
   left: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 

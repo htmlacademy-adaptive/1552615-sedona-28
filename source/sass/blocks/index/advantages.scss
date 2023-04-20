@@ -11,6 +11,16 @@
   @include list-reset;
   display: grid;
   grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.advantages__item--xl {
+  @media (min-width: $tablet-width) {
+    grid-column: span 3;
+  }
 }
 
 .advantages__item {
