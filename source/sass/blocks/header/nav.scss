@@ -15,10 +15,9 @@
   height: 55px;
   width: 55px;
   background: url("../../../img/icons/icon-cross.svg") center center no-repeat;
-  fill: $white;
 
   @media (min-width: $tablet-width) {
-    visibility: hidden;
+    display: none;
   }
 }
 
