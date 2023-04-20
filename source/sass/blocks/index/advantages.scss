@@ -1,4 +1,19 @@
+.advantages {
+  width: 100%;
+}
+
+.advantages__header {
+  margin: 18px;
+  position: relative;
+}
 
 .advantages__list {
   @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.advantages__item {
+  margin: 0;
+  padding: 0;
 }

@@ -9,9 +9,10 @@
   <title>HTML Academy: Седона</title>
 </head>
 
-<body class="page-body">
+<body class="page-body container">
   <header class="header container">
     <nav class="header__nav nav">
+      <button class="nav__button"></button>
       <ul class="nav__list">
         <li class="nav__item nav-item">
           <a href="#" class="nav-item__link">
@@ -23,7 +24,7 @@
             <span class="nav-item__text title">Фото и видео</span>
           </a>
         </li>
-        <li class="nav__item nav-item">
+        <li class="nav__item nav-item nav-item--logo">
           <a href="#" class="nav-item__link nav-item__link--logo">
             <img src="./img/icons/logo.svg" alt="Логотип Седоны" class="nav-item__logo">
           </a>
@@ -46,38 +47,48 @@
     <h1 class="visually-hidden"></h1>
 
     <section class="intro intro--main container">
-      <img src="./img/icons/SEDONA.svg" alt="" class="intro__icon intro__icon--main">
+      <img src="./img/icons/text-index.svg" alt="" class="intro__icon intro__icon--main" width="282" height="214">
     </section>
 
     <section class="advantages container">
       <header class="advantages__header advantages-header">
         <h2 class="visually-hidden">Преимущества Седоны над Гранд Каньоном</h2>
         <p class="advantages-header__title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-        <p class="advantages-header__intro description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <p class="advantages-header__intro description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+        </p>
       </header>
       <ul class="advantages__list">
         <li class="advantages__item advantage advantage--xl">
-          <div class="advantage__wrapper">
-            <h3 class="advantage__title title">Настоящий городок</h3>
-            <span class="advantage__number description">&mdash; №1 &mdash;</span>
-            <p class="advantage__text description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <div class="advantage__container">
+            <div class="advantage__wrapper">
+              <h3 class="advantage__title title">Настоящий городок</h3>
+              <span class="advantage__number description">&mdash; №1 &mdash;</span>
+              <p class="advantage__text description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+            <img src="./img/index/mobile/photo-city@1x.jpg" alt="Фото зеленого здания" class="advantage__image">
           </div>
-          <img src="./img/index/mobile/photo-city@1x.jpg" alt="Фото зеленого здания" class="advantage__image">
           <ul class="advantage__list">
             <li class="advantage__item advantage-item">
-              <h4 class="advantage-item__title title">Жилье</h4>
-              <img src="./img/icons/icon-house.svg" alt="Иконка дома" class="advantage-item__item-icon">
-              <p class="advantage-item__text description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              <img src="./img/icons/icon-house.svg" alt="Иконка дома" class="advantage-item__icon">
+              <div class="advantage-item__wrapper">
+                <h4 class="advantage-item__title title">Жилье</h4>
+                <p class="advantage-item__text description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              </div>
             </li>
             <li class="advantage__item advantage-item">
-              <h4 class="advantage-item__title title">Еда</h4>
-              <img src="./img/icons/icon-burger.svg" alt="Иконка бургера" class="advantage-item__item-icon">
-              <p class="advantage-item__text description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+              <img src="./img/icons/icon-burger.svg" alt="Иконка бургера" class="advantage-item__icon">
+              <div class="advantage-item__wrapper">
+                <h4 class="advantage-item__title title">Еда</h4>
+                <p class="advantage-item__text description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
+                </p>
+              </div>
             </li>
             <li class="advantage__item advantage-item">
-              <h4 class="advantage-item__title title">Сувениры</h4>
-              <img src="./img/icons/icon-gift.svg" alt="Иконка подарка" class="advantage-item__item-icon">
-              <p class="advantage-item__text description">Не только китайского, но и местного производства!</p>
+              <img src="./img/icons/icon-gift.svg" alt="Иконка подарка" class="advantage-item__icon">
+              <div class="advantage-item__wrapper">
+                <h4 class="advantage-item__title title">Сувениры</h4>
+                <p class="advantage-item__text description">Не только китайского, но и местного производства!</p>
+              </div>
             </li>
           </ul>
         </li>
@@ -107,9 +118,12 @@
       </ul>
     </section>
     <section class="search">
-      <h2 class="search__title title title--big">Заинтересовались?</h2>
-      <p class="search__text description">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне
-      </p>
+      <div class="search__wrapper">
+        <h2 class="search__title title title--big">Заинтересовались?</h2>
+        <p class="search__text description">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения
+          гостиниц в Седоне
+        </p>
+      </div>
       <a href="#" class="search__button button">Найти гостиницу</a>
       <div class="search__map-wrapper">
         <img src="./img/index/mobile/map-mobile.jpg" alt="Карта Седоны" class="search__map">
@@ -124,28 +138,28 @@
       </li>
       <li class="footer__item footer-item">
         <ul class="footer-item__list">
-          <li class="footer-item__social footer-social">
-            <a href="#" class="footer-social__link">
-              <span class="footer-social__text visually-hidden">Вконтакте</span>
-              <img src="./img/icons/vk.svg" alt="Вконтакте" class="footer-social__logo">
+          <li class="footer-item__social social">
+            <a href="#" class="social__link">
+              <span class="social__text visually-hidden">Вконтакте</span>
+              <img src="./img/icons/vk.svg" alt="Вконтакте" class="social__logo">
             </a>
           </li>
-          <li class="footer-item__social footer-social">
-            <a href="#" class="footer-social__link">
-              <span class="footer-social__text visually-hidden">Telegram</span>
-              <img src="./img/icons/telegram.svg" alt="Телеграм" class="footer-social__logo">
+          <li class="footer-item__social social">
+            <a href="#" class="social__link">
+              <span class="social__text visually-hidden">Telegram</span>
+              <img src="./img/icons/telegram.svg" alt="Телеграм" class="social__logo">
             </a>
           </li>
-          <li class="footer-item__social footer-social">
-            <a href="#" class="footer-social__link">
-              <span class="footer-social__text visually-hidden">Youtube</span>
-              <img src="./img/icons/youtube.svg" alt="Youtube" class="footer-social__logo">
+          <li class="footer-item__social social">
+            <a href="#" class="social__link">
+              <span class="social__text visually-hidden">Youtube</span>
+              <img src="./img/icons/youtube.svg" alt="Youtube" class="social__logo">
             </a>
           </li>
         </ul>
       </li>
       <li class="footer__item footer-developer">
-        <a href="https://htmlacademy.ru/" class="footer-developer__link">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-developer__link">
           <span class="footer-developer__text">Разработано</span>
           <img src="./img/icons/htmlacademy.svg" alt="Логотип академии" class="footer-developer__logo">
         </a>
