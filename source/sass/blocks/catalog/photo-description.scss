@@ -6,6 +6,14 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+    position: absolute;
+    width: calc(100% - 40px);
+    bottom: 0;
+    background-color: $transparent-black;
+  }
 }
 
 .photo-description__title {
@@ -23,4 +31,12 @@
 .photo-description__button {
   border: none;
   background-color: transparent;
+}
+
+.photo-description__icon {
+  fill: $grey-blue;
+
+  @media (min-width: $desktop-width) {
+    fill: $white;
+  }
 }

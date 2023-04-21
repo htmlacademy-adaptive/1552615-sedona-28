@@ -13,6 +13,10 @@
     min-height: 290px;
   }
 
+  @media (min-width: $desktop-width) {
+    min-height: 301px;
+  }
+
   &--main {
     height: 389px;
 
@@ -40,6 +44,10 @@
 
   @media (min-width: $tablet-width) {
     width: 457px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 460px;
   }
 
   &--main {

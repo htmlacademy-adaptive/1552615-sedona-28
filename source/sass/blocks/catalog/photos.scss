@@ -1,11 +1,19 @@
+.photos {
+  width: 100%;
+}
+
 .photos__list {
   @include list-reset;
-  padding: 18px;
   display: grid;
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
     padding: 60px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
