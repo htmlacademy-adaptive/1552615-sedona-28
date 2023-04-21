@@ -1,0 +1,7 @@
+.photos-header {
+  @include flex-center;
+  width: calc(100% - 36px);
+  padding: 18px;
+  height: 188px;
+  flex-direction: column;
+}

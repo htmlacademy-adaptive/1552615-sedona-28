@@ -9,40 +9,41 @@
   <title>Фото и видео</title>
 </head>
 
-<body class="page-body">
+<body class="page-body container">
   <header class="header container">
     <nav class="header__nav nav">
+      <button class="nav__button"></button>
       <ul class="nav__list">
-        <li class="nav__item">
-          <a href="index.html" class="nav__link">
-            <span class="nav__text title">Главная</span>
+        <li class="nav__item nav-item">
+          <a href="index.html" class="nav-item__link">
+            <span class="nav-item__text">Главная</span>
           </a>
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">
-            <span class="nav__text title">Фото и видео</span>
+        <li class="nav__item nav-item">
+          <a href="#" class="nav-item__link nav-item__link--acitve">
+            <span class="nav-item__text">Фото и видео</span>
           </a>
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link nav__link--logo">
-            <img src="./img/icons/logo.svg" alt="Логотип Седоны" class="nav__logo">
+        <li class="nav__item nav-item nav-item--logo">
+          <a href="#" class="nav-item__link nav-item__link--logo">
+            <img src="./img/icons/logo.svg" alt="Логотип Седоны" class="nav-item__logo">
           </a>
         </li>
-        <li class="nav__item">
-          <a href="./form.html" class="nav__link">
-            <span class="nav__text title">Форма отзыва</span>
+        <li class="nav__item nav-item">
+          <a href="./form.html" class="nav-item__link">
+            <span class="nav-item__text">Форма отзыва</span>
           </a>
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">
-            <span class="nav__text title">HTML Academy</span>
+        <li class="nav__item nav-item">
+          <a href="#" class="nav-item__link">
+            <span class="nav-item__text">HTML Academy</span>
           </a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main class="main-container container">
+  <main class="main-container">
     <h1 class="visually-hidden">Каталог фото и видео</h1>
 
     <section class="intro container">
@@ -50,59 +51,85 @@
     </section>
 
     <section class="photos">
-      <h2 class="photos__title title">Фото и видео</h2>
-      <p class="photos__intro description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть
-        о политике и экономике.</p>
+      <header class="photos__header photos-header">
+        <h2 class="photos-header__title title">Фото и видео</h2>
+        <p class="photos-header__intro description">Не можете решиться на путешествие из-за курса? Фотографии помогут
+          вам забыть о политике и экономике.</p>
+      </header>
       <ul class="photos__list">
         <li class="photos__item photo photo--xl">
           <img src="./img/catalog/mobile/photo-1-mobile.jpg" alt="" class="photo__image">
-          <div class="photo__description-wrapper">
-            <h3 class="photo__title title">Неродные просторы</h3>
-            <p class="photo__author">Автор фото: Борис</p>
-            <div class="photo__like-wrapper">
-              <button class="photo__button">
-                <svg class="photo__like-icon"></svg>
+          <div class="photo__description photo-description">
+            <div class="photo-description__wrapper">
+              <h3 class="photo-description__title title">Неродные просторы</h3>
+              <p class="photo-description__author">Автор фото: Борис</p>
+            </div>
+            <div class="photo-description__like-wrapper">
+              <button class="photo-description__button">
+                <svg class="photo-description__icon" width="22" height="20" viewBox="0 0 22 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.4 3.6L11.8 6.5L11.2 9H13.7H19.9V11C19.9 11 19.9 11 19.9 11.1L17 18H8V8L12.4 3.6ZM2 10V18V10ZM13.2 0L6.6 6.6C6.2 6.9 6 7.4 6 8V18C6 19.1 6.9 20 8 20H17C17.8 20 18.5 19.5 18.8 18.8L21.8 11.7C21.9 11.5 21.9 11.2 21.9 11V9H22C22 7.9 21.1 7 20 7H13.7L14.7 2.4V2.1C14.7 1.7 14.5 1.3 14.3 1L13.2 0ZM4 8H0V20H4V8Z" />
+                </svg>
               </button>
-              <span class="photo__like-count">1350</span>
+              <span class="photo-description__like-count">1350</span>
             </div>
           </div>
         </li>
         <li class="photos__item photo">
           <img src="./img/catalog/mobile/photo-2-mobile.jpg" alt="" class="photo__image">
-          <div class="photo__description-wrapper">
-            <h3 class="photo__title title">Местная растительность</h3>
-            <p class="photo__author">Автор фото: Сергей</p>
-            <div class="photo__like-wrapper">
-              <button class="photo__button">
-                <svg class="photo__like-icon"></svg>
+          <div class="photo__description photo-description">
+            <div class="photo-description__wrapper">
+              <h3 class="photo-description__title title">Местная растительность</h3>
+              <p class="photo-description__author">Автор фото: Сергей</p>
+            </div>
+            <div class="photo-description__like-wrapper">
+              <button class="photo-description__button">
+                <svg class="photo-description__icon" width="22" height="20" viewBox="0 0 22 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.4 3.6L11.8 6.5L11.2 9H13.7H19.9V11C19.9 11 19.9 11 19.9 11.1L17 18H8V8L12.4 3.6ZM2 10V18V10ZM13.2 0L6.6 6.6C6.2 6.9 6 7.4 6 8V18C6 19.1 6.9 20 8 20H17C17.8 20 18.5 19.5 18.8 18.8L21.8 11.7C21.9 11.5 21.9 11.2 21.9 11V9H22C22 7.9 21.1 7 20 7H13.7L14.7 2.4V2.1C14.7 1.7 14.5 1.3 14.3 1L13.2 0ZM4 8H0V20H4V8Z" />
+                </svg>
               </button>
-              <span class="photo__like-count">143</span>
+              <span class="photo-description__like-count">143</span>
             </div>
           </div>
         </li>
         <li class="photos__item photo">
-          <img src="" alt="" class="photo__image">
-          <div class="photo__description-wrapper">
-            <h3 class="photo__title title">Дорога на север</h3>
-            <p class="photo__author">Автор фото: Петр</p>
-            <div class="photo__like-wrapper">
-              <button class="photo__button">
-                <svg class="photo__like-icon"></svg>
+          <img src="./img/catalog/mobile/photo-3-mobile.jpg" alt="" class="photo__image">
+          <div class="photo__description photo-description">
+            <div class="photo-description__wrapper">
+              <h3 class="photo-description__title title">Дорога на север</h3>
+              <p class="photo-description__author">Автор фото: Петр</p>
+            </div>
+            <div class="photo-description__like-wrapper">
+              <button class="photo-description__button">
+                <svg class="photo-description__icon" width="22" height="20" viewBox="0 0 22 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.4 3.6L11.8 6.5L11.2 9H13.7H19.9V11C19.9 11 19.9 11 19.9 11.1L17 18H8V8L12.4 3.6ZM2 10V18V10ZM13.2 0L6.6 6.6C6.2 6.9 6 7.4 6 8V18C6 19.1 6.9 20 8 20H17C17.8 20 18.5 19.5 18.8 18.8L21.8 11.7C21.9 11.5 21.9 11.2 21.9 11V9H22C22 7.9 21.1 7 20 7H13.7L14.7 2.4V2.1C14.7 1.7 14.5 1.3 14.3 1L13.2 0ZM4 8H0V20H4V8Z" />
+                </svg>
               </button>
-              <span class="photo__like-count">96</span>
+              <span class="photo-description__like-count">96</span>
             </div>
           </div>
         </li>
         <li class="photos__item photo">
-          <img src="" alt="" class="photo__image">
-          <div class="photo__description-wrapper">
-            <h3 class="photo__title title">Мост дьявола</h3>
-            <p class="photo__author">Автор фото: Антон</p>
-            <div class="photo__like-wrapper">
-              <button class="photo__button">
-                <svg class="photo__like-icon"></svg>
+          <img src="./img/catalog/mobile/photo-4-mobile.jpg" alt="" class="photo__image">
+          <div class="photo__description photo-description">
+            <div class="photo-description__wrapper">
+              <h3 class="photo-description__title title">Мост дьявола</h3>
+              <p class="photo-description__author">Автор фото: Антон</p>
+            </div>
+            <div class="photo-description__like-wrapper">
+              <button class="photo-description__button">
+                <svg class="photo-description__icon" width="22" height="20" viewBox="0 0 22 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.4 3.6L11.8 6.5L11.2 9H13.7H19.9V11C19.9 11 19.9 11 19.9 11.1L17 18H8V8L12.4 3.6ZM2 10V18V10ZM13.2 0L6.6 6.6C6.2 6.9 6 7.4 6 8V18C6 19.1 6.9 20 8 20H17C17.8 20 18.5 19.5 18.8 18.8L21.8 11.7C21.9 11.5 21.9 11.2 21.9 11V9H22C22 7.9 21.1 7 20 7H13.7L14.7 2.4V2.1C14.7 1.7 14.5 1.3 14.3 1L13.2 0ZM4 8H0V20H4V8Z" />
+                </svg>
               </button>
-              <span class="photo__like-count">254</span>
+              <span class="photo-description__like-count">254</span>
             </div>
           </div>
         </li>
@@ -110,43 +137,46 @@
     </section>
 
     <section class="presentation">
-      <h2 class="presentation__title title">Все еще сомневаетесь?</h2>
-      <p class="presentation__text description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-      <img src="./img/catalog/mobile/video-mobile.jpg" alt="" class="presentation__video">
+      <div class="presentation__wrapper">
+        <h2 class="presentation__title title">Все еще сомневаетесь?</h2>
+        <p class="presentation__text description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали
+          в очередной раз!</p>
+      </div>
+      <img src="./img/catalog/mobile/video-mobile.jpg" alt="Видео с презентацией" class="presentation__video">
     </section>
   </main>
 
   <footer class="footer container">
     <ul class="footer__list">
-      <li class="footer__item">
-        <p class="footer__hashtag title">#visitSEDONA</p>
+      <li class="footer__item footer-item">
+        <p class="footer-item__hashtag title">#visitSEDONA</p>
       </li>
-      <li class="footer__item socials">
-        <ul class="socials__list">
-          <li class="socials__item">
-            <a href="" class="socials__link">
-              <span class="socials__text visually-hidden">Вконтакте</span>
-              <img src="./img/icons/vk.svg" alt="Вконтакте" class="socials__logo">
+      <li class="footer__item footer-item">
+        <ul class="footer-item__list">
+          <li class="footer-item__social social">
+            <a href="#" class="social__link">
+              <span class="social__text visually-hidden">Вконтакте</span>
+              <img src="./img/icons/vk.svg" alt="Вконтакте" class="social__logo">
             </a>
           </li>
-          <li class="socials__item">
-            <a href="" class="socials__link">
-              <span class="socials__text visually-hidden">Telegram</span>
-              <img src="./img/icons/telegram.svg" alt="Телеграм" class="socials__logo">
+          <li class="footer-item__social social">
+            <a href="#" class="social__link">
+              <span class="social__text visually-hidden">Telegram</span>
+              <img src="./img/icons/telegram.svg" alt="Телеграм" class="social__logo">
             </a>
           </li>
-          <li class="socials__item">
-            <a href="" class="socials__link">
-              <span class="socials__text visually-hidden">Youtube</span>
-              <img src="./img/icons/youtube.svg" alt="Youtube" class="socials__logo">
+          <li class="footer-item__social social">
+            <a href="#" class="social__link">
+              <span class="social__text visually-hidden">Youtube</span>
+              <img src="./img/icons/youtube.svg" alt="Youtube" class="social__logo">
             </a>
           </li>
         </ul>
       </li>
-      <li class="footer__item developer">
-        <a href="" class="developer__link">
-          <span class="developer__text">Разработано</span>
-          <img src="./img/icons/htmlacademy.svg" alt="Логотип академии" class="developer__logo">
+      <li class="footer__item footer-developer">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-developer__link">
+          <span class="footer-developer__text">Разработано</span>
+          <img src="./img/icons/htmlacademy.svg" alt="Логотип академии" class="footer-developer__logo">
         </a>
       </li>
     </ul>

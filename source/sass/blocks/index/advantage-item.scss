@@ -1,0 +1,9 @@
+.advantage-item {
+  display: flex;
+  flex-direction: row;
+  height: calc(416 / 3);
+}
+
+.advantage-item__wrapper {
+  flex: 2;
+}

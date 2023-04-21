@@ -1,0 +1,13 @@
+.button {
+  @include link-reset;
+  margin: 0 auto;
+  width: 284px;
+  height: 58px;
+  display: flex;
+  background-color: $grey-blue;
+  color: $white;
+  text-transform: uppercase;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  justify-content: center;
+  align-items: center;
+}

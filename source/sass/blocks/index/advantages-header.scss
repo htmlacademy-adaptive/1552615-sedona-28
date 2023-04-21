@@ -1,0 +1,11 @@
+.advantages-header {
+  @include flex-center;
+  margin: 0 auto;
+  width: calc(100% - 36px);
+  height: 224px;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    width: 520px;
+  }
+}

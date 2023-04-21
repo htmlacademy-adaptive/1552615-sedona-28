@@ -1,0 +1,37 @@
+.presentation {
+  @include flex-center;
+  padding: 18px;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px;
+  }
+}
+
+.presentation__wrapper {
+  @media (min-width: $tablet-width) {
+    max-width: 445px;
+  }
+}
+
+.presentation__title {
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.presentation__video {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 48px;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url("../../../img/icons/play-btn.svg") center center no-repeat;
+  }
+}

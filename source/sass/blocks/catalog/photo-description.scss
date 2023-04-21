@@ -1,0 +1,42 @@
+.photo-description {
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+    position: absolute;
+    width: calc(100% - 40px);
+    bottom: 0;
+    background-color: $transparent-black;
+  }
+}
+
+.photo-description__title {
+  margin: 15px 0 6px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+}
+
+.photo-description__author {
+  margin: 6px 0 14px;
+}
+
+.photo-description__button {
+  border: none;
+  background-color: transparent;
+}
+
+.photo-description__icon {
+  fill: $grey-blue;
+
+  @media (min-width: $desktop-width) {
+    fill: $white;
+  }
+}

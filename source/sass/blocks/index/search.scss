@@ -1,0 +1,24 @@
+.search__wrapper {
+  width: calc(100% - 36px);
+  padding: 18px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px;
+    width: calc(100% - 120px);
+  }
+}
+
+.search__button {
+  width: 100%;
+  max-width: 458px;
+  margin: 0 auto;
+  margin-bottom: 49px;
+}
+
+.search__map {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+}

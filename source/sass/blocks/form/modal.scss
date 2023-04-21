@@ -1,0 +1,34 @@
+.modal__wrapper {
+  @include flex-center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 280px;
+  max-height: 347px;
+  max-width: 400px;
+  outline: 5px solid $black;
+  outline-offset: -5px;
+
+  &--success {
+    max-width: 640px;
+    min-height: 323px;
+  }
+}
+
+.modal__description {
+  max-width: 444px;
+}
+
+.modal__button-wrapper {
+  @include flex-center;
+  width: 100%;
+  height: 98px;
+  background-color: $light-grey;
+}
+
+.modal__button {
+  &--success {
+    @media (min-width: $tablet-width) {
+      width: 458px;
+    }
+  }
+}
