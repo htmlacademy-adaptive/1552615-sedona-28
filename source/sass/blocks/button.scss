@@ -1,5 +1,6 @@
 .button {
   @include link-reset;
+  margin: 0 auto;
   width: 284px;
   height: 58px;
   display: flex;

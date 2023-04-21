@@ -9,51 +9,54 @@
   <title>Форма</title>
 </head>
 
-<body class="page-body">
+<body class="page-body container">
 
   <header class="header container">
     <nav class="header__nav nav">
+      <button class="nav__button"></button>
       <ul class="nav__list">
-        <button class="nav__button"></button>
         <li class="nav__item nav-item">
           <a href="index.html" class="nav-item__link">
-            <span class="nav-item__text title">Главная</span>
+            <span class="nav-item__text">Главная</span>
           </a>
         </li>
         <li class="nav__item nav-item">
-          <a href="./catalog.html" class="nav-item__link">
-            <span class="nav-item__text title">Фото и видео</span>
+          <a href="catalog.html" class="nav-item__link ">
+            <span class="nav-item__text">Фото и видео</span>
           </a>
         </li>
-        <li class="nav__item nav-item">
+        <li class="nav__item nav-item nav-item--logo">
           <a href="#" class="nav-item__link nav-item__link--logo">
             <img src="./img/icons/logo.svg" alt="Логотип Седоны" class="nav-item__logo">
           </a>
         </li>
         <li class="nav__item nav-item">
-          <a href="#" class="nav-item__link">
-            <span class="nav-item__text title">Форма отзыва</span>
+          <a href="#" class="nav-item__link nav-item__link--acitve">
+            <span class="nav-item__text">Форма отзыва</span>
           </a>
         </li>
         <li class="nav__item nav-item">
-          <a href="#" class="nav-item__link">
-            <span class="nav-item__text title">HTML Academy</span>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="nav-item__link">
+            <span class="nav-item__text">HTML Academy</span>
           </a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main class="main-container container">
+  <main class="main-container">
     <h1 class="visually-hidden">Форма отзыва</h1>
+
     <section class="intro container">
       <img src="./img/icons/SEDONA.svg" alt="" class="intro__icon">
     </section>
 
     <section class="review container">
-      <h2 class="review__title title">Оставьте свой отзыв</h2>
-      <p class="review__intro description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
-        вами достопримечательностях</p>
+      <div class="review__header review-header">
+        <h2 class="review-header__title title">Оставьте свой отзыв</h2>
+        <p class="review-header__intro description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+          посещенных вами достопримечательностях</p>
+      </div>
       <form action="#" class="review__form form">
         <fieldset class="form__section container">
           <h3 class="form__title title">Представьтесь:</h3>
@@ -75,46 +78,48 @@
           <h3 class="form__title title">Контактная информация:</h3>
           <label for="phone" class="form__label label">
             Контактный телефон*:
-            <input type="text" class="form__input input input--phone" id="phone" name="phone" placeholder="Введите телефон">
+            <input type="text" class="form__input input input--phone" id="phone" name="phone"
+              placeholder="Введите телефон">
           </label>
           <label for="email" class="form__label label">
             Электронная почта*:
-            <input type="email" class="form__input input input--email" id="email" name="email" placeholder="Введите e-mail">
+            <input type="email" class="form__input input input--email" id="email" name="email"
+              placeholder="Введите e-mail">
           </label>
         </fieldset>
 
         <fieldset class="form__section container">
           <h3 class="form__title title">Ваше общее впечатление:</h3>
-          <label for="good" class="form__label label label--checkbox">
-            <input type="radio" class="form__input input input--radio" id="good" name="good" checked>
+          <label for="good" class="form__label form__label--checkbox label label--checkbox">
+            <input type="radio" class="form__input form__input--checkbox input input--radio" id="good" name="good" checked>
             Скорее положительное
           </label>
-          <label for="bad" class="form__label label label--checkbox">
-            <input type="radio" class="form__input input input--radio" id="bad" name="bad">
+          <label for="bad" class="form__label form__label--checkbox label label--checkbox">
+            <input type="radio" class="form__input form__input--checkbox input input--radio" id="bad" name="bad">
             Скорее отрицательное
           </label>
-          <label for="unknown" class="form__label label label--checkbox">
-            <input type="radio" class="form__input input input--radio" id="unknown" name="unknown">
+          <label for="unknown" class="form__label form__label--checkbox label label--checkbox">
+            <input type="radio" class="form__input form__input--checkbox input input--radio" id="unknown" name="unknown">
             Затрудняюсь ответить
           </label>
         </fieldset>
 
         <fieldset class="form__section container">
           <h3 class="form__title title">Посещенные достопримечательности:</h3>
-          <label for="bridge" class="form__label label label--checkbox">
-            <input type="checkbox" class="form__input input input--checkbox" id="bridge" name="bridge" checked>
+          <label for="bridge" class="form__label form__label--checkbox label label--checkbox">
+            <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="bridge" name="bridge" checked>
             Мост дьявола
           </label>
-          <label for="mountain" class="form__label label label--checkbox">
-            <input type="checkbox" class="form__input input input--checkbox" id="mountain" name="mountain" checked>
+          <label for="mountain" class="form__label form__label--checkbox label label--checkbox">
+            <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="mountain" name="mountain" checked>
             Гора-Колокол
           </label>
-          <label for="park" class="form__label label label--checkbox">
-            <input type="checkbox" class="form__input input input--checkbox" id="park" name="park" checked>
+          <label for="park" class="form__label form__label--checkbox label label--checkbox">
+            <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="park" name="park" checked>
             Слайд-парк
           </label>
-          <label for="rocks" class="form__label label label--checkbox">
-            <input type="checkbox" class="form__input input input--checkbox" id="rocks" name="rocks">
+          <label for="rocks" class="form__label form__label--checkbox label label--checkbox">
+            <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="rocks" name="rocks">
             Красные скалы
           </label>
         </fieldset>
@@ -123,7 +128,8 @@
           <h3 class="form__title title">Опишите свои эмоции:</h3>
           <label for="emotions" class="form__label">
             <span class="visually-hidden">Форма для описания эмоций</span>
-            <textarea classname="form__textarea input" name="emotions" id="emotions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea classname="form__textarea input" name="emotions" id="emotions" cols="30" rows="10"
+              placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
 
@@ -144,10 +150,13 @@
 
     <section class="modal modal--success ">
       <div class="modal__overlay">
-        <div class="modal__wrapper container">
+        <div class="modal__wrapper modal__wrapper--success container">
           <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
-          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.</p>
-          <button class="modal__button button button--success-modal">Закрыть окно</button>
+          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы
+            опубликуем его на сайте.</p>
+            <div class="modal__button-wrapper">
+              <button class="modal__button button">Закрыть окно</button>
+            </div>
         </div>
       </div>
     </section>
