@@ -1,6 +1,6 @@
 //Глобальные стили, шрифты, миксины и переменные
-@import "./global/fonts.scss";
 @import "./global/global.scss";
+@import "./global/fonts.scss";
 @import "./global/variables.scss";
 @import "./global/mixins.scss";
 
@@ -31,8 +31,10 @@
 
 // Стили для страницы каталога catalog.html
 @import "./blocks/catalog/photos.scss";
-// @import "./blocks/catalog/photo.scss";
-// @import "./blocks/catalog/presentation.scss";
+@import "./blocks/catalog/photos-header.scss";
+@import "./blocks/catalog/photo.scss";
+@import "./blocks/catalog/photo-description.scss";
+@import "./blocks/catalog/presentation.scss";
 
 // Стили для страницы формы отзыва form.html
 // @import "./blocks/form/review.scss";

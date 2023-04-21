@@ -1,0 +1,21 @@
+.presentation {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.presentation__video {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 48px;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url("../../../img/icons/play-btn.svg") center center no-repeat;
+  }
+}

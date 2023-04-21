@@ -1,11 +1,6 @@
 .nav {
-  width: 320px;
-  height: 56px;
+  width: 100%;
   position: relative;
-
-  @media (min-width: $tablet-width) {
-    width: 100%;
-  }
 }
 
 .nav__button {
@@ -24,11 +19,8 @@
 .nav__list {
   @include list-reset;
   width: 100%;
-  height: 56px;
   display: grid;
   grid-template-columns: 1fr;
-  top: 0;
-  left: 0;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(5, 1fr);

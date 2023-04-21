@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 158px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: url("../../img/index/desktop/back-desktop.jpg") center center no-repeat;
   position: relative;
 
   &--main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 389px;
 
     @media (min-width: $tablet-width) {
@@ -24,6 +25,7 @@
     height: 57px;
     background: url("../../img/icons/intro-triangle.svg") center center no-repeat;
     position: absolute;
+    left: 0;
     bottom: -1px;
   }
 }
