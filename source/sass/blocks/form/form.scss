@@ -1,11 +1,44 @@
+.form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 60px;
+  }
+}
+
 .form__section {
   padding: 24px 20px;
   border: none;
   border-top: 1px solid $hover-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border-top: none;
+    border-right: 1px solid $hover-grey;
+  }
+
+  &--checkbox,
+  &--textarea {
+    @media (min-width: $tablet-width) {
+      grid-column: 2 span;
+      border: none;
+    }
+  }
+
+  &--textarea {
+    width: 100%;
+  }
 }
 
 .form__title {
   text-align: center;
+}
+
+.form__checkbox-wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .form__label {
@@ -26,6 +59,10 @@
     margin-right: 16px;
     flex: 0;
   }
+}
+
+.form__textarea {
+  width: 100%;
 }
 
 .form__notice {

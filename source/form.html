@@ -88,43 +88,54 @@
           </label>
         </fieldset>
 
-        <fieldset class="form__section container">
+        <fieldset class="form__section form__section--checkbox container">
           <h3 class="form__title title">Ваше общее впечатление:</h3>
-          <label for="good" class="form__label form__label--checkbox label label--checkbox">
-            <input type="radio" class="form__input form__input--checkbox input input--radio" id="good" name="good" checked>
-            Скорее положительное
-          </label>
-          <label for="bad" class="form__label form__label--checkbox label label--checkbox">
-            <input type="radio" class="form__input form__input--checkbox input input--radio" id="bad" name="bad">
-            Скорее отрицательное
-          </label>
-          <label for="unknown" class="form__label form__label--checkbox label label--checkbox">
-            <input type="radio" class="form__input form__input--checkbox input input--radio" id="unknown" name="unknown">
-            Затрудняюсь ответить
-          </label>
+          <div class="form__checkbox-wrapper">
+            <label for="good" class="form__label form__label--checkbox label label--checkbox">
+              <input type="radio" class="form__input form__input--checkbox input input--radio" id="good" name="good"
+                checked>
+              Скорее положительное
+            </label>
+            <label for="bad" class="form__label form__label--checkbox label label--checkbox">
+              <input type="radio" class="form__input form__input--checkbox input input--radio" id="bad" name="bad">
+              Скорее отрицательное
+            </label>
+            <label for="unknown" class="form__label form__label--checkbox label label--checkbox">
+              <input type="radio" class="form__input form__input--checkbox input input--radio" id="unknown"
+                name="unknown">
+              Затрудняюсь ответить
+            </label>
+
+          </div>
         </fieldset>
 
-        <fieldset class="form__section container">
+        <fieldset class="form__section form__section--checkbox container">
           <h3 class="form__title title">Посещенные достопримечательности:</h3>
-          <label for="bridge" class="form__label form__label--checkbox label label--checkbox">
-            <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="bridge" name="bridge" checked>
-            Мост дьявола
-          </label>
-          <label for="mountain" class="form__label form__label--checkbox label label--checkbox">
-            <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="mountain" name="mountain" checked>
-            Гора-Колокол
-          </label>
-          <label for="park" class="form__label form__label--checkbox label label--checkbox">
-            <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="park" name="park" checked>
-            Слайд-парк
-          </label>
-          <label for="rocks" class="form__label form__label--checkbox label label--checkbox">
-            <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="rocks" name="rocks">
-            Красные скалы
-          </label>
+          <div class="form__checkbox-wrapper">
+            <label for="bridge" class="form__label form__label--checkbox label label--checkbox">
+              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="bridge"
+                name="bridge" checked>
+              Мост дьявола
+            </label>
+            <label for="mountain" class="form__label form__label--checkbox label label--checkbox">
+              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="mountain"
+                name="mountain" checked>
+              Гора-Колокол
+            </label>
+            <label for="park" class="form__label form__label--checkbox label label--checkbox">
+              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="park"
+                name="park" checked>
+              Слайд-парк
+            </label>
+            <label for="rocks" class="form__label form__label--checkbox label label--checkbox">
+              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="rocks"
+                name="rocks">
+              Красные скалы
+            </label>
+          </div>
         </fieldset>
 
-        <fieldset class="form__section container">
+        <fieldset class="form__section form__section--textarea container">
           <h3 class="form__title title">Опишите свои эмоции:</h3>
           <label for="emotions" class="form__label">
             <span class="visually-hidden">Форма для описания эмоций</span>
@@ -142,7 +153,7 @@
       <div class="modal__overlay">
         <div class="modal__wrapper container">
           <h2 class="modal__title title">Что-то пошло не так!</h2>
-          <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <p class="modal__description">Проверьте поля, выделенные красным,<br />скорее всего вы забыли их заполнить</p>
           <button class="modal__button button button--failed-modal">Ок</button>
         </div>
       </div>
@@ -152,11 +163,11 @@
       <div class="modal__overlay">
         <div class="modal__wrapper modal__wrapper--success container">
           <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
-          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы
-            опубликуем его на сайте.</p>
-            <div class="modal__button-wrapper">
-              <button class="modal__button button">Закрыть окно</button>
-            </div>
+          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br />В ближайшее время
+            мы опубликуем его на сайте.</p>
+          <div class="modal__button-wrapper">
+            <button class="modal__button modal__button--success button">Закрыть окно</button>
+          </div>
         </div>
       </div>
     </section>

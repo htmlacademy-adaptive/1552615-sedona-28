@@ -1,11 +1,9 @@
 .advantages-header {
+  @include flex-center;
   margin: 0 auto;
   width: calc(100% - 36px);
   height: 224px;
-  display: flex;
-  text-align: center;
   flex-direction: column;
-  justify-content: center;
 
   @media (min-width: $tablet-width) {
     width: 520px;
