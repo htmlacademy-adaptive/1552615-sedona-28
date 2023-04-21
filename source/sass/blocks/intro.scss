@@ -2,12 +2,16 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 158px;
+  min-height: 158px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: url("../../img/index/desktop/back-desktop.jpg") center center no-repeat;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-height: 290px;
+  }
 
   &--main {
     height: 389px;
@@ -33,6 +37,10 @@
 .intro__icon {
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 457px;
+  }
 
   &--main {
     @media (min-width: $tablet-width) {

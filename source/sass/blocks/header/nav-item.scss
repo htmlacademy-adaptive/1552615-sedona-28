@@ -17,6 +17,7 @@
 
     @media (min-width: $tablet-width) {
       position: static;
+      order: 0;
       background-color: transparent;
     }
   }

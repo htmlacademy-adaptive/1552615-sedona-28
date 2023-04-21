@@ -1,10 +1,22 @@
 .photo {
   width: 100%;
-  padding: 18px;
   min-height: 424px;
   display: flex;
   flex-direction: column;
   border-top: 1px solid $hover-grey;
   border-bottom: 1px solid $hover-grey;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    background-color: $light-grey;
+  }
+
+  &:nth-child(3) {
+    background-color: $special-grey;
+  }
+
+  &--xl {
+    grid-column: 2 span;
+  }
 }
