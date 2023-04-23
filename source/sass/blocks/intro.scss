@@ -6,10 +6,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../../img/index/desktop/back-desktop.jpg") center center no-repeat;
+  background: url("../../img/index/desktop/back-desktop.jpg") center -35px no-repeat;
   position: relative;
 
   @media (min-width: $tablet-width) {
+    background: url("../../img/index/desktop/back-desktop.jpg") center 0 no-repeat;
     min-height: 290px;
   }
 
@@ -18,10 +19,11 @@
   }
 
   &--main {
-    height: 389px;
+    margin-top: 56px;
+    min-height: 389px;
 
     @media (min-width: $tablet-width) {
-      height: 518px;
+      min-height: 518px;
     }
   }
 
@@ -51,8 +53,13 @@
   }
 
   &--main {
+    margin-top: 90px;
+    margin-bottom: 85px;
+
     @media (min-width: $tablet-width) {
-      width: 461px;
+      margin-top: 77px;
+      margin-bottom: 91px;
+      min-width: 461px;
       height: auto;
     }
   }

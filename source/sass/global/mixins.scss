@@ -14,3 +14,16 @@
   justify-content: center;
   text-align: center;
 }
+
+@mixin display-flex($align, $justify, $text, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  text-align: $text;
+  flex-direction: $direction;
+}
+
+@mixin display-grid($columns) {
+  display: grid;
+  grid-template-columns: $columns;
+}

@@ -1,9 +1,40 @@
 .advantage-item {
-  display: flex;
-  flex-direction: row;
+  @include display-flex(start, start, left, row);
+  margin: 0;
+  padding: 0;
   height: calc(416 / 3);
+
+  @media (min-width: $tablet-width) {
+    @include display-flex(center, center, center, column);
+    padding: 60px 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 69px 50px;
+  }
 }
 
 .advantage-item__wrapper {
   flex: 2;
+}
+
+.advantage-item__icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 7px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
+}
+
+.advantage-item__title {
+  margin: 8px 0 16px;
+}
+
+.advantage-item__text {
+  margin: 0;
 }

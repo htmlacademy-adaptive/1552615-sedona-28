@@ -1,4 +1,20 @@
 .footer-item__list {
   @include list-reset;
-  @include flex-center;
+  @include display-flex(center, center, center, row);
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer-item__social {
+  margin: 0 3px;
+}
+
+.footer-item__hashtag {
+  margin: 0;
 }

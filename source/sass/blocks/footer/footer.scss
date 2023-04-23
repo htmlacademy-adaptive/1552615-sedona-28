@@ -4,11 +4,28 @@
 
 .footer__list {
   @include list-reset;
-  @include flex-center;
-  flex-direction: column;
+  @include display-flex(center, center, center, column);
+  padding: 17px 18px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-evenly;
+    @include display-flex(center, space-between, center, row);
+    padding: 36px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 36px 120px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer__item {
+  margin: 15px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
   }
 }
