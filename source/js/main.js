@@ -16,17 +16,17 @@ const setMenuOpened = () => {
   button.classList.add("nav__button--closed");
 };
 
-if (windowWidth < TABLET_WIDTH) {
-  setMenuClosed();
-}
+window.addEventListener("resize", () => {
+  (windowWidth < TABLET_WIDTH) ?
+    setMenuClosed() :
+    setMenuOpened();
+});
 
-const onButtonClickHandler = () => {
+button.addEventListener("click", () => {
   if (windowWidth < TABLET_WIDTH) {
     (!menu.classList.contains("nav__list--closed")) ?
       setMenuClosed() :
-      setMenuOpened;
+      setMenuOpened();
   };
-};
-
-button.addEventListener('click', onButtonClickHandler);
+});
 

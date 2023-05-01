@@ -1,27 +1,31 @@
 .photo-description {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+
   @media (min-width: $tablet-width) {
+    @include display-flex(center, space-between, start, row);
     padding: 0 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
     color: $white;
     position: absolute;
-    width: calc(100% - 40px);
+    width: 100%;
     bottom: 0;
     background-color: $transparent-black;
   }
 }
 
+.photo-description__title,
+.photo-description__like-count {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
 .photo-description__title {
   margin: 15px 0 6px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 14px;
-  }
 }
 
 .photo-description__author {
@@ -29,14 +33,20 @@
 }
 
 .photo-description__button {
+  padding: 0;
+  margin-right: 14px;
   border: none;
   background-color: transparent;
 }
 
 .photo-description__icon {
-  fill: $grey-blue;
+  fill: $transparent-black;
 
   @media (min-width: $desktop-width) {
     fill: $white;
   }
+}
+
+.photo-description__like-wrapper {
+  @include display-flex(center, start, center, row);
 }

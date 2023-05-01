@@ -1,16 +1,17 @@
 .intro {
   margin: 0;
   padding: 0;
+  margin-top: 56px;
   width: 100%;
   min-height: 158px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../../img/index/desktop/back-desktop.jpg") center -35px no-repeat;
+  background: url("../../img/catalog/desktop/back-desktop.jpg") -400px -145px no-repeat;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    background: url("../../img/index/desktop/back-desktop.jpg") center 0 no-repeat;
+    background: url("../../img/catalog/desktop/back-desktop.jpg") center 0 no-repeat;
     min-height: 290px;
   }
 
@@ -21,9 +22,11 @@
   &--main {
     margin-top: 56px;
     min-height: 389px;
+    background: url("../../img/index/desktop/back-desktop.jpg") center -35px no-repeat;
 
     @media (min-width: $tablet-width) {
       min-height: 518px;
+      background: url("../../img/index/desktop/back-desktop.jpg") center 0 no-repeat;
     }
   }
 
@@ -41,7 +44,7 @@
 }
 
 .intro__icon {
-  margin: 0;
+  margin: 52px auto 67px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
