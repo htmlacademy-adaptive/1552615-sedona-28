@@ -16,7 +16,7 @@
       <button class="nav__button"></button>
       <ul class="nav__list nav__list--closed">
         <li class="nav__item nav-item">
-          <a href="#" class="nav-item__link nav-item__link--acitve">
+          <a href="./index.html" class="nav-item__link ">
             <span class="nav-item__text">Главная</span>
           </a>
         </li>
@@ -26,12 +26,12 @@
           </a>
         </li>
         <li class="nav__item nav-item">
-          <a href="./form.html" class="nav-item__link">
+          <a href="./form.html" class="nav-item__link nav-item__link--acitve">
             <span class="nav-item__text">Форма отзыва</span>
           </a>
         </li>
         <li class="nav__item nav-item">
-          <a href="#" class="nav-item__link">
+          <a href="./index.html" class="nav-item__link">
             <span class="nav-item__text">HTML Academy</span>
           </a>
         </li>
@@ -59,51 +59,69 @@
         <fieldset class="form__section container">
           <h3 class="form__title title">Представьтесь:</h3>
           <label for="first-name" class="form__label label">
-            Имя*:
-            <input type="text" class="form__input input" id="first-name" name="first-name" value="Пётр">
+            <span class="label__text">Имя*:</span>
+            <input type="text" class="label__input input" id="first-name" name="first-name" value="Пётр">
           </label>
           <label for="last-name" class="form__label label">
-            Фамилия*:
-            <input type="text" class="form__input input" id="last-name" name="last-name" value="Пустота">
+            <span class="label__text">Фамилия*:</span>
+            <input type="text" class="label__input input" id="last-name" name="last-name" value="Пустота">
           </label>
           <label for="surname" class="form__label label">
-            Отчество:
-            <input type="text" class="form__input input" id="surname" name="surname" value="Викторович">
+            <span class="label__text">Отчество:</span>
+            <input type="text" class="label__input input" id="surname" name="surname" value="Викторович">
           </label>
         </fieldset>
 
         <fieldset class="form__section container">
           <h3 class="form__title title">Контактная информация:</h3>
           <label for="phone" class="form__label label">
-            Контактный телефон*:
-            <input type="text" class="form__input input input--phone" id="phone" name="phone"
+            <span class="label__text">Контактный телефон*:</span>
+            <input type="text" class="label__input input input--phone" id="phone" name="phone"
               placeholder="Введите телефон">
+            <svg class="label__icon" width="58" height="58" viewBox="0 0 58 58" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="58" height="58" fill="#E6E6E6" />
+              <path
+                d="M23.6 27.8C25 30.6 27.4 32.9 30.2 34.4L32.4 32.2C32.7 31.9 33.1 31.8 33.4 32C34.5 32.4 35.7 32.6 37 32.6C37.6 32.6 38 33 38 33.6V37C38 37.6 37.6 38 37 38C27.6 38 20 30.4 20 21C20 20.4 20.4 20 21 20H24.5C25.1 20 25.5 20.4 25.5 21C25.5 22.2 25.7 23.4 26.1 24.6C26.2 24.9 26.1 25.3 25.9 25.6L23.6 27.8Z"
+                fill="#010101" />
+            </svg>
+
+
           </label>
           <label for="email" class="form__label label">
-            Электронная почта*:
-            <input type="email" class="form__input input input--email" id="email" name="email"
+            <span class="label__text">Электронная почта*:</span>
+            <input type="email" class="label__input input input--email" id="email" name="email"
               placeholder="Введите e-mail">
+            <svg class="label__icon" width="58" height="58" viewBox="0 0 58 58" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="58" height="58" fill="#E6E6E6" />
+              <path
+                d="M29 31C28.7 31 28.5 30.9 28 30.7L21 27V34C21 34.5 21.5 35 22 35H36C36.5 35 37 34.5 37 34V27L30 30.7C29.5 30.9 29.3 31 29 31ZM36 23H22C21.5 23 21 23.5 21 24V24.8L29 29L37 24.8V24C37 23.5 36.5 23 36 23Z"
+                fill="black" />
+            </svg>
           </label>
         </fieldset>
 
         <fieldset class="form__section form__section--checkbox container">
           <h3 class="form__title title">Ваше общее впечатление:</h3>
-          <div class="form__checkbox-wrapper">
+          <div class="form__radio-wrapper">
             <label for="good" class="form__label form__label--checkbox label label--checkbox">
-              <input type="radio" class="form__input form__input--checkbox input input--radio" id="good" name="good"
+              <input type="radio" class="label__input label__input--radio input" id="good" name="good" value="good"
                 checked>
-              Скорее положительное
+              <span class="label__radio"></span>
+              <span class="label__text">Скорее положительное</span>
             </label>
             <label for="bad" class="form__label form__label--checkbox label label--checkbox">
-              <input type="radio" class="form__input form__input--checkbox input input--radio" id="bad" name="bad">
-              Скорее отрицательное
+              <input type="radio" class="label__input label__input--radio input" id="bad" name="bad" value="bad">
+              <span class="label__radio"></span>
+              <span class="label__text">Скорее отрицательное</span>
             </label>
             <label for="unknown" class="form__label form__label--checkbox label label--checkbox">
-              <input type="radio" class="form__input form__input--checkbox input input--radio" id="unknown"
-                name="unknown">
-              Затрудняюсь ответить
+              <input type="radio" class="label__input label__input--radio input" id="unknown" name="unknown"
+                value="unknown">
+              <span class="label__radio"></span>
+              <span class="label__text">Затрудняюсь ответить
             </label>
-
           </div>
         </fieldset>
 
@@ -111,24 +129,26 @@
           <h3 class="form__title title">Посещенные достопримечательности:</h3>
           <div class="form__checkbox-wrapper">
             <label for="bridge" class="form__label form__label--checkbox label label--checkbox">
-              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="bridge"
-                name="bridge" checked>
-              Мост дьявола
+              <input type="checkbox" class="label__input label__input--checkbox input" id="bridge" name="bridge"
+                checked>
+              <span class="label__checkbox"></span>
+              <span class="label__text">Мост дьявола</span>
             </label>
             <label for="mountain" class="form__label form__label--checkbox label label--checkbox">
-              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="mountain"
-                name="mountain" checked>
-              Гора-Колокол
+              <input type="checkbox" class="label__input label__input--checkbox input" id="mountain" name="mountain"
+                checked>
+              <span class="label__checkbox"></span>
+              <span class="label__text">Гора-Колокол</span>
             </label>
             <label for="park" class="form__label form__label--checkbox label label--checkbox">
-              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="park"
-                name="park" checked>
-              Слайд-парк
+              <input type="checkbox" class="label__input label__input--checkbox input " id="park" name="park" checked>
+              <span class="label__checkbox"></span>
+              <span class="label__text">Слайд-парк</span>
             </label>
             <label for="rocks" class="form__label form__label--checkbox label label--checkbox">
-              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="rocks"
-                name="rocks">
-              Красные скалы
+              <input type="checkbox" class="label__input label__input--checkbox input " id="rocks" name="rocks">
+              <span class="label__checkbox"></span>
+              <span class="label__text">Красные скалы</span>
             </label>
           </div>
         </fieldset>
@@ -137,13 +157,15 @@
           <h3 class="form__title title">Опишите свои эмоции:</h3>
           <label for="emotions" class="form__label">
             <span class="visually-hidden">Форма для описания эмоций</span>
-            <textarea classname="form__textarea input" name="emotions" id="emotions" cols="30" rows="10"
+            <textarea class="label__textarea input" name="emotions" id="emotions" cols="30" rows="10"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
 
-        <input type="submit" class="form__button button">
-        <span class="form__notice">* - обязательные поля</span>
+        <div class="form__wrapper">
+          <input type="submit" class="form__button button">
+          <span class="form__notice">* - обязательные поля</span>
+        </div>
       </form>
     </section>
 
@@ -157,7 +179,7 @@
       </div>
     </section>
 
-    <section class="modal modal--success ">
+    <section class="modal modal--success container">
       <div class="modal__overlay">
         <div class="modal__wrapper modal__wrapper--success container">
           <h2 class="modal__title title">Ваш отзыв отправлен!</h2>

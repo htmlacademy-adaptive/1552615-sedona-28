@@ -12,7 +12,9 @@
 }
 
 .footer-item__social {
+  display: flex;
   margin: 0 3px;
+  line-height: 0;
 }
 
 .footer-item__hashtag {

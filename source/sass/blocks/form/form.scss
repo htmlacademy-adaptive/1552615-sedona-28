@@ -1,12 +1,16 @@
 .form {
+  box-sizing: border-box;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 60px;
+    padding: 50px 60px;
+    gap: 55px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 160px;
+    gap: 100px;
   }
 }
 
@@ -15,39 +19,99 @@
   padding: 24px 20px;
   border: none;
   border-top: 1px solid $hover-grey;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     padding: 0;
     border-top: none;
-    border-right: 1px solid $hover-grey;
-  }
 
-  &--checkbox,
-  &--textarea {
-    @media (min-width: $tablet-width) {
-      grid-column: 2 span;
-      border: none;
+    position: relative;
+
+    &:first-child {
+      &::after {
+        @include absolute-element(1px, 100%);
+        background-color: $hover-grey;
+        top: 0;
+        right: calc(55px / -2);
+      }
     }
-  }
 
-  &--textarea {
-    width: 100%;
+    &:not(:first-child, :nth-child(2)) > .form__title {
+      padding: 0 123px;
+    }
+
+    &:not(:first-child, :nth-child(2)) > .form__title::before {
+      @include absolute-element(123px, 1px);
+      background-color: $hover-grey;
+      top: 50%;
+      left: 0;
+    }
+
+    &:not(:first-child, :nth-child(2)) > .form__title::after {
+      @include absolute-element(123px, 1px);
+      background-color: $hover-grey;
+      top: 50%;
+      right: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      &:first-child {
+        &::after {
+          right: calc(100px / -2);
+        }
+      }
+
+      &:not(:first-child, :nth-child(2)) > .form__title::before,
+      &:not(:first-child, :nth-child(2)) > .form__title::after {
+        width: 280px;
+      }
+    }
+
+    &--checkbox,
+    &--textarea {
+      @media (min-width: $tablet-width) {
+        grid-column: 2 span;
+        border: none;
+      }
+    }
+
+    &--textarea {
+      width: 100%;
+    }
   }
 }
 
 .form__title {
+  width: 100%;
   text-align: center;
+  margin-top: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 28px;
+    margin-top: 12px;
+    position: relative;
+    box-sizing: border-box;
+  }
 }
 
+.form__radio-wrapper,
 .form__checkbox-wrapper {
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
+.form__radio-wrapper {
   @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.form__checkbox-wrapper {
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -62,22 +126,37 @@
   }
 }
 
-.form__input {
-  flex: 1;
+.form__wrapper {
+  width: 100%;
+  grid-column: 2 span;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 
-  &--checkbox {
-    margin-right: 16px;
-    flex: 0;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-.form__textarea {
-  width: 100%;
-}
 
 .form__notice {
+  margin-top: 3px;
   margin-right: 20px;
   display: block;
+  color: $notice-grey;
+  font-size: 12px;
+  line-height: 21px;
   text-transform: uppercase;
   text-align: right;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+.form__button {
+  margin: 0;
 }
