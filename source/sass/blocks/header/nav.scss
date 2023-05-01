@@ -9,20 +9,57 @@
   right: 0;
   height: 55px;
   width: 55px;
-  background: url("../../../img/icons/icon-cross.svg") center center no-repeat;
+  background: url("../../../img/icons/icon-menu-burger.svg") center center no-repeat;
+  border: none;
+  z-index: 100;
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+
+  &--closed {
+    background: url("../../../img/icons/icon-cross.svg") center center no-repeat;
   }
 }
 
 .nav__list {
   @include list-reset;
+  @include display-flex(center, center, center, column);
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
+  position: absolute;
+  z-index: 10;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(5, 1fr);
+    flex-direction: row;
+    justify-content: space-between;
   }
+
+  &--nojs {
+    position: static;
+  }
+
+  &--closed {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+}
+
+.nav__logo-link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: calc(185px / -2);
+  background-color: transparent;
+  z-index: 50;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+  }
+}
+
+.nav__logo {
+  align-self: flex-start;
 }

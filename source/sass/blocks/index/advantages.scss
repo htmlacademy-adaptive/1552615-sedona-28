@@ -17,13 +17,13 @@
   }
 }
 
-.advantages__item--xl {
-  @media (min-width: $tablet-width) {
-    grid-column: span 3;
-  }
-}
-
 .advantages__item {
   margin: 0;
   padding: 0;
+
+  &--xl {
+    @media (min-width: $tablet-width) {
+      grid-column: span 3;
+    }
+  }
 }

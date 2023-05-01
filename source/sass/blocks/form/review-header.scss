@@ -1,16 +1,26 @@
 .review-header {
-  @include flex-center;
-  margin: 64px auto 100px;
-  padding: 0 20px;
-  flex-direction: column;
+  @include display-flex(center, center, center, column);
+  margin: 0 auto;
+  padding: 36px 20px 28px;
 
   @media (min-width: $tablet-width) {
+    padding: 64px 167px 50px;
     max-width: 436px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 115px 382px 60px;
   }
 }
 
 .review-header__title {
+  margin-top: 0;
+
   @media (min-width: $tablet-width) {
     font-size: 30px;
   }
+}
+
+.review-header__intro {
+  margin-bottom: 0;
 }

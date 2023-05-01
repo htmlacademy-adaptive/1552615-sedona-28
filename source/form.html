@@ -14,33 +14,31 @@
   <header class="header container">
     <nav class="header__nav nav">
       <button class="nav__button"></button>
-      <ul class="nav__list">
+      <ul class="nav__list nav__list--closed">
         <li class="nav__item nav-item">
-          <a href="index.html" class="nav-item__link">
+          <a href="./index.html" class="nav-item__link ">
             <span class="nav-item__text">Главная</span>
           </a>
         </li>
         <li class="nav__item nav-item">
-          <a href="catalog.html" class="nav-item__link ">
+          <a href="./catalog.html" class="nav-item__link">
             <span class="nav-item__text">Фото и видео</span>
           </a>
         </li>
-        <li class="nav__item nav-item nav-item--logo">
-          <a href="#" class="nav-item__link nav-item__link--logo">
-            <img src="./img/icons/logo.svg" alt="Логотип Седоны" class="nav-item__logo">
-          </a>
-        </li>
         <li class="nav__item nav-item">
-          <a href="#" class="nav-item__link nav-item__link--acitve">
+          <a href="./form.html" class="nav-item__link nav-item__link--acitve">
             <span class="nav-item__text">Форма отзыва</span>
           </a>
         </li>
         <li class="nav__item nav-item">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="nav-item__link">
+          <a href="./index.html" class="nav-item__link">
             <span class="nav-item__text">HTML Academy</span>
           </a>
         </li>
       </ul>
+      <a href="#" class="nav__logo-link">
+        <img src="./img/icons/logo.svg" alt="Логотип Седоны" class="nav__logo" width="185" height="96">
+      </a>
     </nav>
   </header>
 
@@ -61,51 +59,69 @@
         <fieldset class="form__section container">
           <h3 class="form__title title">Представьтесь:</h3>
           <label for="first-name" class="form__label label">
-            Имя*:
-            <input type="text" class="form__input input" id="first-name" name="first-name" value="Пётр">
+            <span class="label__text">Имя*:</span>
+            <input type="text" class="label__input input" id="first-name" name="first-name" value="Пётр">
           </label>
           <label for="last-name" class="form__label label">
-            Фамилия*:
-            <input type="text" class="form__input input" id="last-name" name="last-name" value="Пустота">
+            <span class="label__text">Фамилия*:</span>
+            <input type="text" class="label__input input" id="last-name" name="last-name" value="Пустота">
           </label>
           <label for="surname" class="form__label label">
-            Отчество:
-            <input type="text" class="form__input input" id="surname" name="surname" value="Викторович">
+            <span class="label__text">Отчество:</span>
+            <input type="text" class="label__input input" id="surname" name="surname" value="Викторович">
           </label>
         </fieldset>
 
         <fieldset class="form__section container">
           <h3 class="form__title title">Контактная информация:</h3>
           <label for="phone" class="form__label label">
-            Контактный телефон*:
-            <input type="text" class="form__input input input--phone" id="phone" name="phone"
+            <span class="label__text">Контактный телефон*:</span>
+            <input type="text" class="label__input input input--phone" id="phone" name="phone"
               placeholder="Введите телефон">
+            <svg class="label__icon" width="58" height="58" viewBox="0 0 58 58" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="58" height="58" fill="#E6E6E6" />
+              <path
+                d="M23.6 27.8C25 30.6 27.4 32.9 30.2 34.4L32.4 32.2C32.7 31.9 33.1 31.8 33.4 32C34.5 32.4 35.7 32.6 37 32.6C37.6 32.6 38 33 38 33.6V37C38 37.6 37.6 38 37 38C27.6 38 20 30.4 20 21C20 20.4 20.4 20 21 20H24.5C25.1 20 25.5 20.4 25.5 21C25.5 22.2 25.7 23.4 26.1 24.6C26.2 24.9 26.1 25.3 25.9 25.6L23.6 27.8Z"
+                fill="#010101" />
+            </svg>
+
+
           </label>
           <label for="email" class="form__label label">
-            Электронная почта*:
-            <input type="email" class="form__input input input--email" id="email" name="email"
+            <span class="label__text">Электронная почта*:</span>
+            <input type="email" class="label__input input input--email" id="email" name="email"
               placeholder="Введите e-mail">
+            <svg class="label__icon" width="58" height="58" viewBox="0 0 58 58" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="58" height="58" fill="#E6E6E6" />
+              <path
+                d="M29 31C28.7 31 28.5 30.9 28 30.7L21 27V34C21 34.5 21.5 35 22 35H36C36.5 35 37 34.5 37 34V27L30 30.7C29.5 30.9 29.3 31 29 31ZM36 23H22C21.5 23 21 23.5 21 24V24.8L29 29L37 24.8V24C37 23.5 36.5 23 36 23Z"
+                fill="black" />
+            </svg>
           </label>
         </fieldset>
 
         <fieldset class="form__section form__section--checkbox container">
           <h3 class="form__title title">Ваше общее впечатление:</h3>
-          <div class="form__checkbox-wrapper">
+          <div class="form__radio-wrapper">
             <label for="good" class="form__label form__label--checkbox label label--checkbox">
-              <input type="radio" class="form__input form__input--checkbox input input--radio" id="good" name="good"
+              <input type="radio" class="label__input label__input--radio input" id="good" name="good" value="good"
                 checked>
-              Скорее положительное
+              <span class="label__radio"></span>
+              <span class="label__text">Скорее положительное</span>
             </label>
             <label for="bad" class="form__label form__label--checkbox label label--checkbox">
-              <input type="radio" class="form__input form__input--checkbox input input--radio" id="bad" name="bad">
-              Скорее отрицательное
+              <input type="radio" class="label__input label__input--radio input" id="bad" name="bad" value="bad">
+              <span class="label__radio"></span>
+              <span class="label__text">Скорее отрицательное</span>
             </label>
             <label for="unknown" class="form__label form__label--checkbox label label--checkbox">
-              <input type="radio" class="form__input form__input--checkbox input input--radio" id="unknown"
-                name="unknown">
-              Затрудняюсь ответить
+              <input type="radio" class="label__input label__input--radio input" id="unknown" name="unknown"
+                value="unknown">
+              <span class="label__radio"></span>
+              <span class="label__text">Затрудняюсь ответить
             </label>
-
           </div>
         </fieldset>
 
@@ -113,24 +129,26 @@
           <h3 class="form__title title">Посещенные достопримечательности:</h3>
           <div class="form__checkbox-wrapper">
             <label for="bridge" class="form__label form__label--checkbox label label--checkbox">
-              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="bridge"
-                name="bridge" checked>
-              Мост дьявола
+              <input type="checkbox" class="label__input label__input--checkbox input" id="bridge" name="bridge"
+                checked>
+              <span class="label__checkbox"></span>
+              <span class="label__text">Мост дьявола</span>
             </label>
             <label for="mountain" class="form__label form__label--checkbox label label--checkbox">
-              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="mountain"
-                name="mountain" checked>
-              Гора-Колокол
+              <input type="checkbox" class="label__input label__input--checkbox input" id="mountain" name="mountain"
+                checked>
+              <span class="label__checkbox"></span>
+              <span class="label__text">Гора-Колокол</span>
             </label>
             <label for="park" class="form__label form__label--checkbox label label--checkbox">
-              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="park"
-                name="park" checked>
-              Слайд-парк
+              <input type="checkbox" class="label__input label__input--checkbox input " id="park" name="park" checked>
+              <span class="label__checkbox"></span>
+              <span class="label__text">Слайд-парк</span>
             </label>
             <label for="rocks" class="form__label form__label--checkbox label label--checkbox">
-              <input type="checkbox" class="form__input form__input--checkbox input input--checkbox" id="rocks"
-                name="rocks">
-              Красные скалы
+              <input type="checkbox" class="label__input label__input--checkbox input " id="rocks" name="rocks">
+              <span class="label__checkbox"></span>
+              <span class="label__text">Красные скалы</span>
             </label>
           </div>
         </fieldset>
@@ -139,13 +157,15 @@
           <h3 class="form__title title">Опишите свои эмоции:</h3>
           <label for="emotions" class="form__label">
             <span class="visually-hidden">Форма для описания эмоций</span>
-            <textarea classname="form__textarea input" name="emotions" id="emotions" cols="30" rows="10"
+            <textarea class="label__textarea input" name="emotions" id="emotions" cols="30" rows="10"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
 
-        <input type="submit" class="form__button button">
-        <span class="form__notice">* - обязательные поля</span>
+        <div class="form__wrapper">
+          <input type="submit" class="form__button button">
+          <span class="form__notice">* - обязательные поля</span>
+        </div>
       </form>
     </section>
 
@@ -159,7 +179,7 @@
       </div>
     </section>
 
-    <section class="modal modal--success ">
+    <section class="modal modal--success container">
       <div class="modal__overlay">
         <div class="modal__wrapper modal__wrapper--success container">
           <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
@@ -180,34 +200,38 @@
       </li>
       <li class="footer__item footer-item">
         <ul class="footer-item__list">
-          <li class="footer-item__social footer-social">
-            <a href="#" class="footer-social__link">
-              <span class="footer-social__text visually-hidden">Вконтакте</span>
-              <img src="./img/icons/vk.svg" alt="Вконтакте" class="footer-social__logo">
+          <li class="footer-item__social social">
+            <a href="#" class="social__link">
+              <span class="social__text visually-hidden">Вконтакте</span>
+              <img src="./img/icons/vk.svg" alt="Вконтакте" class="social__logo">
             </a>
           </li>
-          <li class="footer-item__social footer-social">
-            <a href="#" class="footer-social__link">
-              <span class="footer-social__text visually-hidden">Telegram</span>
-              <img src="./img/icons/telegram.svg" alt="Телеграм" class="footer-social__logo">
+          <li class="footer-item__social social">
+            <a href="#" class="social__link">
+              <span class="social__text visually-hidden">Telegram</span>
+              <img src="./img/icons/telegram.svg" alt="Телеграм" class="social__logo">
             </a>
           </li>
-          <li class="footer-item__social footer-social">
-            <a href="#" class="footer-social__link">
-              <span class="footer-social__text visually-hidden">Youtube</span>
-              <img src="./img/icons/youtube.svg" alt="Youtube" class="footer-social__logo">
+          <li class="footer-item__social social">
+            <a href="#" class="social__link">
+              <span class="social__text visually-hidden">Youtube</span>
+              <img src="./img/icons/youtube.svg" alt="Youtube" class="social__logo">
             </a>
           </li>
         </ul>
       </li>
       <li class="footer__item footer-developer">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-developer__link">
-          <span class="footer-developer__text">Разработано</span>
-          <img src="./img/icons/htmlacademy.svg" alt="Логотип академии" class="footer-developer__logo">
+          <span class="footer-developer__text description">Разработано</span>
+          <svg width="27" height="35" viewBox="0 0 27 35" fill="#000" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.65 0.449951H13.55L0.0500031 1.84995V26.55L13.55 34.5499L26.95 26.55V1.84995L13.65 0.449951ZM25.05 12.55L13.55 5.74995V5.64995H13.45L13.35 5.54995V5.64995L1.95 12.55V3.54995L13.45 2.34995L25.05 3.54995V12.55ZM13.45 7.24995L24.95 13.95L20.45 16.55L13.35 12.35V13.75L19.25 17.25L18.35 17.75L13.35 14.75V16.15L17.15 18.45L16.35 18.95L13.35 17.15V18.55L15.25 19.65L13.45 20.75L2.05 14.05L13.45 7.24995ZM1.95 15.55L13.35 22.35V23.35L5.45 18.65V20.05L13.45 24.85V25.95L5.45 21.25V22.65L13.45 27.45L21.55 22.55V17.35L24.95 15.35V25.35L13.45 32.25L1.95 25.45V15.55Z" />
+          </svg>
         </a>
       </li>
     </ul>
   </footer>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

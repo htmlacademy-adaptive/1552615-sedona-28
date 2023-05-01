@@ -1,11 +1,46 @@
 .advantages-header {
-  @include flex-center;
+  @include display-flex(center, center, center, column);
   margin: 0 auto;
-  width: calc(100% - 36px);
-  height: 224px;
-  flex-direction: column;
+  padding: 0 18px;
+  width: 100%;
+  min-height: 205px;
+  position: relative;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 37px;
+    background: url("../../../img/index/mobile/white-triangle.png") center center no-repeat;
+    position: absolute;
+    bottom: -36px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 520px;
+    padding: 47px 0 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 484px;
+    padding: 59px 0 44px;
+  }
+}
+
+.advantages-header__title {
+  margin-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.advantages-header__intro {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
   }
 }
