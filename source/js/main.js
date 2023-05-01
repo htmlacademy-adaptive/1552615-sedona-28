@@ -29,4 +29,3 @@ button.addEventListener("click", () => {
       setMenuOpened();
   };
 });
-
