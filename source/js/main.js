@@ -16,10 +16,15 @@ const setMenuOpened = () => {
   button.classList.add("nav__button--closed");
 };
 
+const setNotMobile = () => {
+  menu.classList.remove("nav__list--closed");
+  logo.style.display = "block";
+}
+
 window.addEventListener("resize", () => {
   (windowWidth < TABLET_WIDTH) ?
     setMenuClosed() :
-    setMenuOpened();
+    setMenuOpened;
 });
 
 button.addEventListener("click", () => {
@@ -29,3 +34,7 @@ button.addEventListener("click", () => {
       setMenuOpened();
   };
 });
+
+(windowWidth < TABLET_WIDTH) ?
+  setMenuClosed() :
+  setNotMobile();
