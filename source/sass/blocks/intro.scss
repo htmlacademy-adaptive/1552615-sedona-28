@@ -10,8 +10,13 @@
   background: url("../../img/catalog/desktop/back-desktop.jpg") -400px -145px no-repeat;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/index/desktop/back-desktop@2x.jpg");
+    background-size: 1200px auto;
+  }
+
   @media (min-width: $tablet-width) {
-    background: url("../../img/catalog/desktop/back-desktop.jpg") center 0 no-repeat;
+    background-position: center 0;
     min-height: 290px;
   }
 
@@ -27,6 +32,11 @@
     @media (min-width: $tablet-width) {
       min-height: 518px;
       background: url("../../img/index/desktop/back-desktop.jpg") center 0 no-repeat;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/index/desktop/back-desktop@2x.jpg");
+      background-size: 1200px auto;
     }
   }
 

@@ -1,7 +1,6 @@
 const button = document.querySelector(".nav__button");
 const menu = document.querySelector(".nav__list");
 const logo = document.querySelector(".nav__logo-link");
-const windowWidth = document.documentElement.clientWidth;
 const TABLET_WIDTH = 768;
 
 const setMenuClosed = () => {
@@ -17,24 +16,34 @@ const setMenuOpened = () => {
 };
 
 const setNotMobile = () => {
-  menu.classList.remove("nav__list--closed");
-  logo.style.display = "block";
+  if (!menu.classList.contains("nav__list--closed")) {
+    menu.classList.remove("nav__list--closed");
+  }
+  if (logo.style.display === "none") {
+    logo.style.display = "block";
+  }
 }
 
 window.addEventListener("resize", () => {
-  (windowWidth < TABLET_WIDTH) ?
-    setMenuClosed() :
-    setMenuOpened;
-});
-
-button.addEventListener("click", () => {
-  if (windowWidth < TABLET_WIDTH) {
-    (!menu.classList.contains("nav__list--closed")) ?
-      setMenuClosed() :
-      setMenuOpened();
+  if (document.documentElement.clientWidth < TABLET_WIDTH) {
+    setMenuClosed();
+  } else {
+    setNotMobile();
   };
 });
 
-(windowWidth < TABLET_WIDTH) ?
-  setMenuClosed() :
+button.addEventListener("click", () => {
+  if (document.documentElement.clientWidth < TABLET_WIDTH) {
+    (!menu.classList.contains("nav__list--closed")) ?
+      setMenuClosed() :
+      setMenuOpened();
+  } else {
+    setNotMobile();
+  };
+});
+
+if (document.documentElement.clientWidth < TABLET_WIDTH) {
+  setMenuClosed();
+} else {
   setNotMobile();
+};

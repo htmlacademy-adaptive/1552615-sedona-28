@@ -68,8 +68,14 @@
               <span class="advantage__number description">&mdash; №1 &mdash;</span>
               <p class="advantage__text description">Седона не аттракцион для туристов, там&nbsp;течет своя жизнь</p>
             </div>
-            <img src="./img/index/desktop/photo-city@1x.jpg" alt="Фото зеленого здания" class="advantage__image"
-              width="800" height="256">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/index/desktop/photo-city@1x.jpg 1x, ./img/index/desktop/photo-city@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/index/tablet/photo-city@1x.jpg 1x, ./img/index/tablet/photo-city@2x.jpg 2x">
+              <img src="./img/index/mobile/photo-city@1x.jpg" alt="Фото зеленого здания" class="advantage__image"
+                width="520" height="260" srcset="./img/index/mobile/photo-city@2x.jpg 2x">
+            </picture>
           </div>
           <ul class="advantage__list">
             <li class="advantage__item advantage-item">
@@ -104,7 +110,14 @@
               <span class="advantage__number description">&mdash; №2 &mdash;</span>
               <p class="advantage__text description">Да, по нему можно пройти! Если&nbsp;вы&nbsp;осмелитесь, конечно</p>
             </div>
-            <img src="./img/index/desktop/photo-bridge@1x.jpg" alt="Фото скал" class="advantage__image">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/index/desktop/photo-bridge@1x.jpg 1x, ./img/index/desktop/photo-bridge@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/index/tablet/photo-bridge@1x.jpg 1x, ./img/index/tablet/photo-bridge@2x.jpg 2x">
+              <img src="./img/index/mobile/photo-bridge@1x.jpg" srcset="./img/index/mobile/photo-bridge@2x.jpg 2x"
+                alt="Фото зеленого здания" class="advantage__image" width="520" height="260">
+            </picture>
           </div>
         </li>
         <li class="advantages__item advantage">
@@ -139,7 +152,7 @@
         <a href="#" class="search__button button">Найти гостиницу</a>
       </div>
       <div class="search__map-wrapper">
-        <img src="./img/index/desktop/map-desktop.jpg" alt="Карта Седоны" class="search__map" width="1200" height="350">
+        <img src="./img/index/desktop/map-desktop.jpg" srcset="./img/index/desktop/map-desktop@2x.jpg 2x" alt="Карта Седоны" class="search__map" width="1200" height="350">
       </div>
     </section>
   </main>

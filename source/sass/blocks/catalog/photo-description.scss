@@ -26,10 +26,18 @@
 
 .photo-description__title {
   margin: 15px 0 6px;
+
+  @media (min-width: $desktop-width) {
+    margin: 17px 0 2px;
+  }
 }
 
 .photo-description__author {
   margin: 6px 0 14px;
+
+  @media (min-width: $desktop-width) {
+    margin: 2px 0 17px;
+  }
 }
 
 .photo-description__button {

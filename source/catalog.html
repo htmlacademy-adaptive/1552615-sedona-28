@@ -60,7 +60,11 @@
       </header>
       <ul class="photos__list">
         <li class="photos__item photo photo--xl">
-          <img src="./img/catalog/mobile/photo-1-mobile.jpg" alt="" class="photo__image">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/catalog/desktop/photo-1-desktop.jpg 1x, ./img/catalog/desktop/photo-1-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="./img/catalog/tablet/photo-1-desktop.jpg 1x, ./img/catalog/tablet/photo-1-desktop@2x.jpg 2x">
+            <img src="./img/catalog/mobile/photo-1-mobile.jpg" srcset="./img/catalog/mobile/photo-1-mobile@2x.jpg 2x" alt="Красивый закат" class="photo__image photo__image--xl">
+          </picture>
           <div class="photo__description photo-description">
             <div class="photo-description__wrapper">
               <h3 class="photo-description__title">Неродные просторы</h3>
@@ -79,7 +83,11 @@
           </div>
         </li>
         <li class="photos__item photo">
-          <img src="./img/catalog/mobile/photo-2-mobile.jpg" alt="" class="photo__image">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/catalog/desktop/photo-2-desktop.jpg 1x, ./img/catalog/desktop/photo-2-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="./img/catalog/tablet/photo-2-desktop.jpg 1x, ./img/catalog/tablet/photo-2-desktop@2x.jpg 2x">
+            <img src="./img/catalog/mobile/photo-2-mobile.jpg" srcset="./img/catalog/mobile/photo-2-mobile@2x.jpg 2x" alt="Непонятный цветок" class="photo__image">
+          </picture>
           <div class="photo__description photo-description">
             <div class="photo-description__wrapper">
               <h3 class="photo-description__title">Местная растительность</h3>
@@ -98,7 +106,11 @@
           </div>
         </li>
         <li class="photos__item photo">
-          <img src="./img/catalog/mobile/photo-3-mobile.jpg" alt="" class="photo__image">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/catalog/desktop/photo-3-desktop.jpg 1x, ./img/catalog/desktop/photo-3-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="./img/catalog/tablet/photo-3-desktop.jpg 1x, ./img/catalog/tablet/photo-3-desktop@2x.jpg 2x">
+            <img src="./img/catalog/mobile/photo-3-mobile.jpg" srcset="./img/catalog/mobile/photo-3-mobile@2x.jpg 2x" alt="Дорога в горах" class="photo__image">
+          </picture>
           <div class="photo__description photo-description">
             <div class="photo-description__wrapper">
               <h3 class="photo-description__title">Дорога на север</h3>
@@ -117,7 +129,11 @@
           </div>
         </li>
         <li class="photos__item photo">
-          <img src="./img/catalog/mobile/photo-4-mobile.jpg" alt="" class="photo__image">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/catalog/desktop/photo-4-desktop.jpg 1x, ./img/catalog/desktop/photo-4-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="./img/catalog/tablet/photo-4-desktop.jpg 1x, ./img/catalog/tablet/photo-4-desktop@2x.jpg 2x">
+            <img src="./img/catalog/mobile/photo-4-mobile.jpg" srcset="./img/catalog/mobile/photo-4-mobile@2x.jpg 2x" alt="Красные скалы" class="photo__image">
+          </picture>
           <div class="photo__description photo-description">
             <div class="photo-description__wrapper">
               <h3 class="photo-description__title">Мост дьявола</h3>
@@ -147,7 +163,12 @@
       </div>
       <div class="presentation__video-wrapper container">
         <a href="#" class="presentation__link">
-          <img src="./img/catalog/desktop/video-desktop.jpg" alt="Видео с презентацией" class="presentation__video" width="800" height="500">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/catalog/desktop/video-desktop.jpg 1x, ./img/catalog/desktop/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="./img/catalog/tablet/video-desktop.jpg 1x, ./img/catalog/tablet/video-desktop@2x.jpg 2x">
+            <img src="./img/catalog/mobile/video-mobile.jpg" srcset="./img/catalog/mobile/video-mobile@2x.jpg 2x" alt="Видео с презентацией" class="presentation__video" width="280" height="177">
+          </picture>
+
           <span class="presentation__play-btn"></span>
         </a>
       </div>
