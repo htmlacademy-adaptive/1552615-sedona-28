@@ -5,10 +5,6 @@
   min-height: 165px;
   box-sizing: border-box;
 
-  &--special {
-    padding-top: 70px;
-    padding-bottom: 40px;
-  }
 
   &--xl {
     padding: 0;
@@ -43,6 +39,15 @@
       @media (min-width: $tablet-width) {
         order: 2;
       }
+    }
+  }
+
+  &--special {
+    padding-top: 70px;
+    padding-bottom: 40px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
     }
   }
 }
