@@ -6,13 +6,13 @@
   box-sizing: border-box;
   position: relative;
 
-
-  &--checkbox {
+  &--checkbox,
+  &--radio {
     margin: 0;
     padding: 18px 0;
     margin-left: 46px;
     font-family: "PTSans Bold", "Arial", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
     text-transform: none;
     font-weight: bold;
@@ -84,5 +84,10 @@
 
   @media (min-width: $tablet-width) {
     max-height: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: 768px;
   }
 }

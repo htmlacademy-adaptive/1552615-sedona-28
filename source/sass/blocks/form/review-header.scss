@@ -4,7 +4,7 @@
   padding: 36px 20px 28px;
 
   @media (min-width: $tablet-width) {
-    padding: 64px 167px 50px;
+    padding: 64px 160px 50px;
     max-width: 436px;
   }
 
@@ -15,6 +15,7 @@
 
 .review-header__title {
   margin-top: 0;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -23,4 +24,12 @@
 
 .review-header__intro {
   margin-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 22px;
+  }
 }

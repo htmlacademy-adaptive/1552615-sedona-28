@@ -76,7 +76,7 @@
           </label>
         </fieldset>
 
-        <fieldset class="form__section container">
+        <fieldset class="form__section form__section--contacts  container">
           <h3 class="form__title title">Контактная информация:</h3>
           <label for="phone" class="form__label label">
             <span class="label__text">Контактный телефон*:</span>
@@ -89,8 +89,6 @@
                 d="M23.6 27.8C25 30.6 27.4 32.9 30.2 34.4L32.4 32.2C32.7 31.9 33.1 31.8 33.4 32C34.5 32.4 35.7 32.6 37 32.6C37.6 32.6 38 33 38 33.6V37C38 37.6 37.6 38 37 38C27.6 38 20 30.4 20 21C20 20.4 20.4 20 21 20H24.5C25.1 20 25.5 20.4 25.5 21C25.5 22.2 25.7 23.4 26.1 24.6C26.2 24.9 26.1 25.3 25.9 25.6L23.6 27.8Z"
                 fill="#010101" />
             </svg>
-
-
           </label>
           <label for="email" class="form__label label">
             <span class="label__text">Электронная почта*:</span>
@@ -106,21 +104,21 @@
           </label>
         </fieldset>
 
-        <fieldset class="form__section form__section--checkbox container">
+        <fieldset class="form__section form__section--radio container">
           <h3 class="form__title title">Ваше общее впечатление:</h3>
           <div class="form__radio-wrapper">
-            <label for="good" class="form__label form__label--checkbox label label--checkbox">
+            <label for="good" class="form__label form__label--radio label label--radio">
               <input type="radio" class="label__input label__input--radio input" id="good" name="good" value="good"
                 checked>
               <span class="label__radio"></span>
               <span class="label__text">Скорее положительное</span>
             </label>
-            <label for="bad" class="form__label form__label--checkbox label label--checkbox">
+            <label for="bad" class="form__label form__label--radio label label--radio">
               <input type="radio" class="label__input label__input--radio input" id="bad" name="bad" value="bad">
               <span class="label__radio"></span>
               <span class="label__text">Скорее отрицательное</span>
             </label>
-            <label for="unknown" class="form__label form__label--checkbox label label--checkbox">
+            <label for="unknown" class="form__label form__label--radio label label--radio">
               <input type="radio" class="label__input label__input--radio input" id="unknown" name="unknown"
                 value="unknown">
               <span class="label__radio"></span>
@@ -136,7 +134,7 @@
               <input type="checkbox" class="label__input label__input--checkbox input" id="bridge" name="bridge"
                 checked>
               <span class="label__checkbox"></span>
-              <span class="label__text">Мост дьявола</span>
+              <span class="label__text">Мост Дьявола</span>
             </label>
             <label for="mountain" class="form__label form__label--checkbox label label--checkbox">
               <input type="checkbox" class="label__input label__input--checkbox input" id="mountain" name="mountain"
@@ -159,7 +157,7 @@
 
         <fieldset class="form__section form__section--textarea container">
           <h3 class="form__title title">Опишите свои эмоции:</h3>
-          <label for="emotions" class="form__label">
+          <label for="emotions" class="form__label form__label--textarea">
             <span class="visually-hidden">Форма для описания эмоций</span>
             <textarea class="label__textarea input" name="emotions" id="emotions" cols="30" rows="10"
               placeholder="Опишите подробно все свои восторги"></textarea>
@@ -167,8 +165,8 @@
         </fieldset>
 
         <div class="form__wrapper">
-          <input type="submit" class="form__button button">
-          <span class="form__notice">* - обязательные поля</span>
+          <input type="submit" class="form__button button" value="Отправить отзыв">
+          <span class="form__notice">* &mdash; обязательные поля</span>
         </div>
       </form>
     </section>
@@ -227,10 +225,7 @@
       <li class="footer__item footer-developer">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-developer__link">
           <span class="footer-developer__text description">Разработано</span>
-          <svg width="27" height="35" viewBox="0 0 27 35" fill="#000" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.65 0.449951H13.55L0.0500031 1.84995V26.55L13.55 34.5499L26.95 26.55V1.84995L13.65 0.449951ZM25.05 12.55L13.55 5.74995V5.64995H13.45L13.35 5.54995V5.64995L1.95 12.55V3.54995L13.45 2.34995L25.05 3.54995V12.55ZM13.45 7.24995L24.95 13.95L20.45 16.55L13.35 12.35V13.75L19.25 17.25L18.35 17.75L13.35 14.75V16.15L17.15 18.45L16.35 18.95L13.35 17.15V18.55L15.25 19.65L13.45 20.75L2.05 14.05L13.45 7.24995ZM1.95 15.55L13.35 22.35V23.35L5.45 18.65V20.05L13.45 24.85V25.95L5.45 21.25V22.65L13.45 27.45L21.55 22.55V17.35L24.95 15.35V25.35L13.45 32.25L1.95 25.45V15.55Z" />
-          </svg>
+          <span class="footer-developer__logo"></span>
         </a>
       </li>
     </ul>
