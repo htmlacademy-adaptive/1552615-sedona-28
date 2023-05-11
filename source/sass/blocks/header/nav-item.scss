@@ -8,25 +8,17 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    max-width: 240px;
+    max-width: 153px;
     height: 56px;
     background-color: $white;
     border-bottom: none;
   }
 
-  &:nth-child(2n) {
-    margin-right: 0;
-
-    @media (min-width: $tablet-width) {
-      margin-right: calc(153px / 2);
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-right: calc(240px / 2);
-    }
+  @media (min-width: $desktop-width) {
+    max-width: 240px;
   }
 
-  &:nth-child(3n) {
+  &:nth-child(4n-1) {
     margin-left: 0;
 
     @media (min-width: $tablet-width) {
@@ -35,6 +27,19 @@
 
     @media (min-width: $desktop-width) {
       margin-left: calc(240px / 2);
+    }
+  }
+
+  &:nth-child(2n),
+  &:nth-child(6n) {
+    margin-right: 0;
+
+    @media (min-width: $tablet-width) {
+      margin-right: calc(153px / 2);
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: calc(240px / 2);
     }
   }
 

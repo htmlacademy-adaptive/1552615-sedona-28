@@ -25,6 +25,7 @@
 .nav__list {
   @include list-reset;
   @include display-flex(center, center, center, column);
+  flex-wrap: wrap;
   width: 100%;
   position: absolute;
   z-index: 10;
