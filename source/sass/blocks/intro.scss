@@ -11,7 +11,7 @@
   position: relative;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/index/catalog/back-desktop@2x.jpg");
+    background-image: url("../../img/catalog/desktop/back-desktop@2x.jpg");
     background-size: 1200px auto;
   }
 
@@ -65,7 +65,7 @@
 
   @media (min-width: $tablet-width) {
     width: 457px;
-    margin-left: 157px;
+    margin-left: 9.9em;
     margin-top: 46px;
   }
 

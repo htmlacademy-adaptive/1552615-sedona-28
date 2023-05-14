@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 21px;
 
   @media (min-width: $tablet-width) {
     @include display-flex(center, space-between, start, row);
@@ -50,16 +51,16 @@
   margin: 10px 0 2px;
 
   @media (min-width: $tablet-width) {
-    margin: 18px 0 2px;
+    margin: 21px 0 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 20px 0 8px;
+    margin: 22px 0 8px;
   }
 }
 
 .photo-description__author {
-  margin: 4px 0 15px;
+  margin: 2px 0 15px;
   font-size: 14px;
 
   @media (min-width: $desktop-width) {
@@ -74,7 +75,16 @@
   height: 20px;
   border: none;
   mask: url("../../../img/icons/sprite.svg#like-icon");
-  background-color: $grey-blue;
+  background-color: $transparent-black;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     margin-right: 10px;

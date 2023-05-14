@@ -1,13 +1,25 @@
 .button {
   @include link-reset;
+  @include display-flex(center, center, center, row);
   margin: 0 auto;
   height: 58px;
-  display: flex;
   background-color: $grey-blue;
   color: $white;
   text-transform: uppercase;
   font-family: "PT Sans Bold", "Arial", sans-serif;
-  justify-content: center;
-  align-items: center;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-grey-blue;
+  }
+
+  &:active {
+    background-color: $clicked-grey-blue;
+    color: $clicked-white;
+  }
+
+  &:disabled {
+    background-color: $hover-grey;
+  }
 }

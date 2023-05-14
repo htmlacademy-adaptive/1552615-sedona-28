@@ -9,6 +9,16 @@
   display: block;
   box-sizing: border-box;
 
+  &:hover {
+    background-color: $hover-grey;
+  }
+
+  &:focus {
+    background-color: $white;
+    outline: 4px solid $light-grey;
+    outline-offset: -4px;
+  }
+
   &::placeholder {
     font-family: "PT Sans Bold", "Arial", sans-serif;
     font-size: 18px;

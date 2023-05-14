@@ -9,16 +9,35 @@
   right: 0;
   height: 56px;
   width: 56px;
-  background: url("../../../img/icons/icon-menu-burger.svg") 13px center no-repeat;
+  mask: url("../../../img/icons/sprite.svg#icon-menu-burger") 13px 13px no-repeat;
+  background-color: $grey-blue;
   border: none;
   z-index: 100;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $menu-btn-hover;
+  }
+
+  &:active {
+    background-color: $menu-btn-clicked;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 
   &--closed {
-    background: url("../../../img/icons/icon-cross.svg") center center no-repeat;
+    mask: url("../../../img/icons/sprite.svg#icon-cross") 13px 13px no-repeat;
+    background-color: $white;
+
+    &:hover {
+      background-color: $hover-white;
+    }
+
+    &:active {
+      background-color: $clicked-white;
+    }
   }
 }
 

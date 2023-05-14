@@ -1,25 +1,40 @@
 .footer-developer {
   @include display-flex(center, center, center, row);
+  cursor: pointer;
 }
 
 .footer-developer__link {
   @include link-reset;
   @include display-flex(center, center, center, row);
-
-  flex-direction: row;
   color: $black;
 }
 
 .footer-developer__text {
-  margin-right: 12px;
+  margin-right: 6px;
 }
 
 .footer-developer__logo {
   margin: 0;
-  margin-left: 12px;
+  margin-left: 6px;
   padding: 0;
   width: 27px;
   height: 35px;
   mask: url("../../../img/icons/sprite.svg#htmlacademy");
   background-color: $black;
+}
+
+.footer-developer:hover > .footer-developer__link {
+  color: $grey-blue;
+}
+
+.footer-developer:hover .footer-developer__logo {
+  background-color: $grey-blue;
+}
+
+.footer-developer:active > .footer-developer__link {
+  color: $clicked-developer-footer;
+}
+
+.footer-developer:active .footer-developer__logo {
+  background-color: $clicked-developer-footer;
 }

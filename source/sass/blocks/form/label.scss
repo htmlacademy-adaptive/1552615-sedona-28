@@ -5,6 +5,7 @@
   font-weight: normal;
   box-sizing: border-box;
   position: relative;
+  cursor: pointer;
 
   &--checkbox,
   &--radio {
@@ -20,7 +21,7 @@
 }
 
 .label__input {
-  flex: 1;
+  flex-grow: 1;
 
   &--radio {
     position: absolute;
@@ -42,14 +43,29 @@
 
 .label__radio {
   @include absolute-element(46px, 46px);
-  margin-left: -46px;
   top: 50%;
+  margin-left: -46px;
   margin-top: -23px;
-  background: url("../../../img/icons/radio.svg") center center no-repeat;
+  background-color: $light-grey;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $hover-grey;
+  }
+
+  &:active {
+    background-color: $clicked-grey;
+  }
 }
 
-.label__input:checked + .label__radio {
-  background: url("../../../img/icons/radio-checked.svg");
+.label__input:checked + .label__radio::after {
+  @include absolute-element(16px, 16px);
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+  mask: url("../../../img/icons/sprite.svg#checked-radio") center center no-repeat;
+  background-color: #333333;
 }
 
 .label__checkbox {
@@ -57,11 +73,33 @@
   margin-left: -46px;
   top: 50%;
   margin-top: -23px;
-  background: url("../../../img/icons/checkbox.svg") center center no-repeat;
+  border-radius: 4px;
+  background-color: $light-grey;
 }
 
-.label__input:checked + .label__checkbox {
-  background: url("../../../img/icons/checkbox-checked.svg");
+.label__input:checked + .label__checkbox::after {
+  @include absolute-element(22px, 16px);
+  top: 50%;
+  left: 50%;
+  margin-top: -9px;
+  margin-left: -11px;
+  mask: url("../../../img/icons/sprite.svg#checkbox-checked");
+  background-color: #333333;
+}
+
+.label:hover > .label__radio,
+.label:hover > .label__checkbox {
+  background-color: $hover-grey;
+}
+
+.label:active > .label__radio,
+.label:active > .label__checkbox {
+  background-color: $clicked-grey;
+}
+
+.label:active > .label__input:checked + .label__radio::after,
+.label:active > .label__input:checked + .label__checkbox::after {
+  background-color: $clicked-checked-grey;
 }
 
 .label__text {

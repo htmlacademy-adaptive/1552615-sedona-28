@@ -29,8 +29,8 @@
             <span class="nav-item__text">Фото и видео</span>
           </a>
         </li>
-        <li class="nav__item nav-item">
-          <a href="./form.html" class="nav-item__link nav-item__link--acitve">
+        <li class="nav__item nav-item nav-item--active">
+          <a href="./form.html" class="nav-item__link">
             <span class="nav-item__text">Форма отзыва</span>
           </a>
         </li>
@@ -108,18 +108,18 @@
           <h3 class="form__title title">Ваше общее впечатление:</h3>
           <div class="form__radio-wrapper">
             <label for="good" class="form__label form__label--radio label label--radio">
-              <input type="radio" class="label__input label__input--radio input" id="good" name="good" value="good"
+              <input type="radio" class="label__input label__input--radio input" id="good" name="impression" value="good"
                 checked>
               <span class="label__radio"></span>
               <span class="label__text">Скорее положительное</span>
             </label>
             <label for="bad" class="form__label form__label--radio label label--radio">
-              <input type="radio" class="label__input label__input--radio input" id="bad" name="bad" value="bad">
+              <input type="radio" class="label__input label__input--radio input" id="bad" name="impression" value="bad">
               <span class="label__radio"></span>
               <span class="label__text">Скорее отрицательное</span>
             </label>
             <label for="unknown" class="form__label form__label--radio label label--radio">
-              <input type="radio" class="label__input label__input--radio input" id="unknown" name="unknown"
+              <input type="radio" class="label__input label__input--radio input" id="unknown" name="impression"
                 value="unknown">
               <span class="label__radio"></span>
               <span class="label__text">Затрудняюсь ответить
@@ -202,22 +202,19 @@
       </li>
       <li class="footer__item footer-item">
         <ul class="footer-item__list">
-          <li class="footer-item__social social">
+          <li class="footer-item__social footer-item__social--vk social">
             <a href="#" class="social__link">
               <span class="social__text visually-hidden">Вконтакте</span>
-              <img src="./img/icons/vk.svg" alt="Вконтакте" class="social__logo">
             </a>
           </li>
-          <li class="footer-item__social social">
+          <li class="footer-item__social footer-item__social--telegram social">
             <a href="#" class="social__link">
               <span class="social__text visually-hidden">Telegram</span>
-              <img src="./img/icons/telegram.svg" alt="Телеграм" class="social__logo">
             </a>
           </li>
-          <li class="footer-item__social social">
+          <li class="footer-item__social footer-item__social--youtube social">
             <a href="#" class="social__link">
               <span class="social__text visually-hidden">Youtube</span>
-              <img src="./img/icons/youtube.svg" alt="Youtube" class="social__logo">
             </a>
           </li>
         </ul>
