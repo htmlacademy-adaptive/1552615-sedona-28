@@ -9,18 +9,19 @@
   right: 0;
   height: 56px;
   width: 56px;
-  mask: url("../../../img/icons/sprite.svg#icon-menu-burger") 13px 13px no-repeat;
-  background-color: $grey-blue;
+  background-color: transparent;
   border: none;
   z-index: 100;
   cursor: pointer;
 
-  &:hover {
-    background-color: $menu-btn-hover;
-  }
-
-  &:active {
-    background-color: $menu-btn-clicked;
+  &::after {
+    @include absolute-element(23px, 22px);
+    mask: url("../../../img/icons/sprite.svg#icon-menu-burger") no-repeat;
+    top: 50%;
+    left: 50%;
+    margin-top: -11px;
+    margin-left: -11.5px;
+    background-color: $grey-blue;
   }
 
   @media (min-width: $tablet-width) {
@@ -28,17 +29,32 @@
   }
 
   &--closed {
-    mask: url("../../../img/icons/sprite.svg#icon-cross") 13px 13px no-repeat;
-    background-color: $white;
-
-    &:hover {
-      background-color: $hover-white;
-    }
-
-    &:active {
-      background-color: $clicked-white;
+    &::after {
+      @include absolute-element(26px, 25px);
+      mask: url("../../../img/icons/sprite.svg#icon-cross") no-repeat;
+      top: 50%;
+      left: 50%;
+      margin-top: -13px;
+      margin-left: -12.5px;
+      background-color: $white;
     }
   }
+}
+
+.nav__button:hover::after {
+  background-color: $menu-btn-hover;
+}
+
+.nav__button:active::after {
+  background-color: $menu-btn-clicked;
+}
+
+.nav__button--closed:hover::after {
+  background-color: $hover-white;
+}
+
+.nav__button--closed:active::after {
+  background-color: $clicked-white;
 }
 
 .nav__list {
