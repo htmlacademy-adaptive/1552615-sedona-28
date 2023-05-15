@@ -48,26 +48,16 @@
   height: 350px;
   position: relative;
   box-sizing: border-box;
+  background: url("../../../img/icons/map-marker.svg") center center no-repeat, url("../../../img/index/desktop/map-desktop.jpg") center center no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../../../img/icons/map-marker.svg") center center no-repeat, url("../../../img/index/desktop/map-desktop@2x.jpg") center center no-repeat;
+  }
 }
 
 .search__map {
   width: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.search__map-marker {
-  width: 27px;
-  height: 27px;
-  position: absolute;
-  background: url("../../../img/icons/map-marker.svg") center center no-repeat;
-  top: 50%;
-  left: 50%;
-  margin-top: calc(27px / -2);
-  margin-left: calc(27px / -2);
-
-  @media (min-width: $tablet-width) {
-    top: 164px;
-    margin-top: 0;
-  }
+  background: url("../../../img/index/desktop/map-desktop.jpg") center center no-repeat;
 }

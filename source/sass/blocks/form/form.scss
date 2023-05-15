@@ -113,7 +113,7 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 12px;
-      margin-bottom: 22px;
+      margin-bottom: 21px;
     }
 
     @media (min-width: $desktop-width) {
@@ -127,7 +127,7 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 4px;
-      margin-bottom: 20px;
+      margin-bottom: 21px;
     }
 
     @media (min-width: $desktop-width) {
@@ -164,35 +164,39 @@
 
 .form__radio-wrapper,
 .form__checkbox-wrapper {
+  @include display-flex(start, center, start, column);
+  flex-wrap: wrap;
+  margin: 0 auto;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 10px;
+    flex-direction: row;
   }
 }
 
 .form__radio-wrapper {
   @media (min-width: $tablet-width) {
+    justify-content: start;
     padding-left: 36px;
-    padding-right: 28px;
+    padding-right: 22px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 26px;
-    padding-right: 17px;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 0;
+    justify-content: space-between;
+    padding-left: 52px;
+    padding-right: 12px;
   }
 }
 
 .form__checkbox-wrapper {
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    padding: 0 84px;
+  }
+
   @media (min-width: $desktop-width) {
-    padding: 0 44px;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    column-gap: 30px;
+    justify-content: space-around;
+    padding: 0 12px;
   }
 }
 
@@ -213,44 +217,36 @@
       }
     }
 
+    &:first-child,
+    &:nth-child(2n + 1) {
+      @media (min-width: $tablet-width) {
+        margin-right: 16px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-right: 0;
+      }
+    }
+
     @media (min-width: $tablet-width) {
       margin: 0;
       flex-direction: row;
-      flex: 1;
-      display: block;
-      align-items: center;
+      min-width: calc(280px - 46px);
     }
 
     @media (min-width: $desktop-width) {
-      min-width: calc(280px - 46px);
       text-align: center;
+      margin-right: 10px;
     }
   }
 
   &--checkbox {
-    &:first-child,
-    &:nth-child(3n) {
-      @media (min-width: $tablet-width) {
-        padding-left: 84px;
-      }
-
-      @media (min-width: $desktop-width) {
-        padding-left: 0;
-      }
-    }
-
-    &:nth-child(2n) {
-      @media (min-width: $tablet-width) {
-        padding-left: 12px;
-      }
-
-      @media (min-width: $desktop-width) {
-        padding-left: 0;
-      }
-    }
-
     @media (min-width: $tablet-width) {
-      margin-left: 90px;
+      min-width: calc(224px - 46px);
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: calc(153px - 46px);
     }
   }
 
