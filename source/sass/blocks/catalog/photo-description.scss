@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 14px;
+  line-height: 21px;
 
   @media (min-width: $tablet-width) {
     @include display-flex(center, space-between, start, row);
@@ -16,24 +16,52 @@
     bottom: 0;
     background-color: $transparent-black;
   }
+
+  &--xl .photo-description__title {
+    @media (min-width: $desktop-width) {
+      margin: 24px 0 2px;
+    }
+  }
+}
+
+.photo-description__wrapper {
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 4px;
+  }
+
+  &--xl {
+    margin-left: 0;
+
+    @media (min-width: $desktop-width) {
+      margin-left: 0;
+    }
+  }
 }
 
 .photo-description__title,
 .photo-description__like-count {
   font-family: "PT Sans Bold", "Arial", sans-serif;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 .photo-description__title {
-  margin: 15px 0 6px;
+  margin: 10px 0 2px;
+
+  @media (min-width: $tablet-width) {
+    margin: 21px 0 0;
+  }
 
   @media (min-width: $desktop-width) {
-    margin: 17px 0 2px;
+    margin: 22px 0 8px;
   }
 }
 
 .photo-description__author {
-  margin: 6px 0 14px;
+  margin: 2px 0 15px;
+  font-size: 14px;
 
   @media (min-width: $desktop-width) {
     margin: 2px 0 17px;
@@ -43,8 +71,28 @@
 .photo-description__button {
   padding: 0;
   margin-right: 14px;
+  width: 22px;
+  height: 20px;
   border: none;
-  background-color: transparent;
+  mask: url("../../../img/icons/sprite.svg#like-icon");
+  background-color: $transparent-black;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $white;
+  }
 }
 
 .photo-description__icon {

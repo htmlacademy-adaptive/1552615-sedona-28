@@ -1,29 +1,31 @@
 .photos-header {
-  @include display-flex(center, space-between, center, column);
+  @include display-flex(center, start, center, column);
   width: 100%;
   padding: 37px 20px 25px;
   min-height: 188px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 66px 155px 67px;
+    padding: 66px 165px 82px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 100px 370px 65px;
+    padding: 98px 380px 90px;
   }
 }
 
 .photos-header__title {
   margin-top: 0;
+  margin-bottom: 14px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
-    margin-bottom: 19px;
+    margin-bottom: 12px;
   }
 }
 
 .photos-header__intro {
+  margin-top: 12px;
   margin-bottom: 0;
 
   @media (min-width: $tablet-width) {

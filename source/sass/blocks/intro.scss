@@ -11,32 +11,38 @@
   position: relative;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/index/desktop/back-desktop@2x.jpg");
+    background-image: url("../../img/catalog/desktop/back-desktop@2x.jpg");
     background-size: 1200px auto;
   }
 
   @media (min-width: $tablet-width) {
-    background-position: center 0;
+    background-position: center -228px;
     min-height: 290px;
   }
 
   @media (min-width: $desktop-width) {
+    background-position: 0 -217px;
     min-height: 301px;
   }
 
   &--main {
     margin-top: 56px;
     min-height: 389px;
-    background: url("../../img/index/desktop/back-desktop.jpg") center -35px no-repeat;
+    background: url("../../img/index/mobile/back-mobile.jpg") center 0 no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/index/mobile/back-mobile@2x.jpg");
+      background-size: 901px auto;
+    }
 
     @media (min-width: $tablet-width) {
       min-height: 518px;
       background: url("../../img/index/desktop/back-desktop.jpg") center 0 no-repeat;
-    }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/index/desktop/back-desktop@2x.jpg");
-      background-size: 1200px auto;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/index/desktop/back-desktop@2x.jpg");
+        background-size: 1200px auto;
+      }
     }
   }
 
@@ -59,9 +65,14 @@
 
   @media (min-width: $tablet-width) {
     width: 457px;
+    margin-left: 9.9em;
+    margin-top: 46px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 18px;
+    margin-left: 23em;
     width: 460px;
   }
 

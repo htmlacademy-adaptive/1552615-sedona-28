@@ -15,8 +15,64 @@
   display: flex;
   margin: 0 3px;
   line-height: 0;
+  background-color: $grey-blue;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-grey-blue;
+  }
+
+  &:active {
+    background-color: $clicked-grey-blue;
+  }
+
+  &--vk {
+    &::after {
+      @include absolute-element(24px, 24px);
+      top: 50%;
+      left: 50%;
+      margin-top: -12px;
+      margin-left: -12px;
+      mask: url("../../../img/icons/sprite.svg#vk");
+      background-color: $white;
+    }
+  }
+
+  &--telegram {
+    &::after {
+      @include absolute-element(24px, 24px);
+      top: 50%;
+      left: 50%;
+      margin-top: -12px;
+      margin-left: -12px;
+      mask: url("../../../img/icons/sprite.svg#telegram");
+      background-color: $white;
+    }
+  }
+
+  &--youtube {
+    &::after {
+      @include absolute-element(20px, 14px);
+      top: 50%;
+      left: 50%;
+      margin-top: -7px;
+      margin-left: -10px;
+      mask: url("../../../img/icons/sprite.svg#youtube");
+      background-color: $white;
+    }
+  }
+}
+
+.footer-item__social:active::after {
+  background-color: $clicked-white;
 }
 
 .footer-item__hashtag {
-  margin: 0;
+  margin-top: 3px;
+  margin-bottom: 0;
+  font-size: 21px;
+  line-height: 26px;
 }

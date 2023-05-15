@@ -39,11 +39,17 @@
     }
   }
 
+  .photo__link {
+    @include link-reset;
+    position: relative;
+  }
+
   .photo__image {
     width: 100%;
     height: auto;
     max-height: 280px;
     object-fit: cover;
+    background-color: $grey;
 
     @media (min-width: $tablet-width) {
       max-height: 267px;
@@ -55,4 +61,12 @@
       }
     }
   }
+}
+
+.photo:hover .photo__image {
+  opacity: 0.8;
+}
+
+.photo:active .photo__image {
+  opacity: 0.6;
 }

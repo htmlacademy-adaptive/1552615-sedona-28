@@ -4,19 +4,22 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 50px 60px;
-    gap: 55px;
+    padding: 50px 60px 64px;
+    column-gap: 55px;
+    row-gap: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 160px;
-    gap: 100px;
+    padding: 0 120px 66px;
+    column-gap: 100px;
+    row-gap: 35px;
   }
 }
 
 .form__section {
   width: 100%;
-  padding: 24px 20px;
+  height: 100%;
+  padding: 24px 20px 23px;
   border: none;
   border-top: 1px solid $hover-grey;
   box-sizing: border-box;
@@ -24,7 +27,6 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     border-top: none;
-
     position: relative;
 
     &:first-child {
@@ -53,30 +55,94 @@
       top: 50%;
       right: 0;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:first-child {
+      &::after {
+        right: calc(100px / -2);
+      }
+    }
+
+    &:not(:first-child, :nth-child(2)) > .form__title {
+      padding: 0 280px;
+    }
+
+    &:not(:first-child, :nth-child(2)) > .form__title::before,
+    &:not(:first-child, :nth-child(2)) > .form__title::after {
+      width: 280px;
+    }
+  }
+
+  &--contacts {
+    padding: 24px 20px 18px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
+  }
+
+  &--checkbox,
+  &--radio,
+  &--textarea {
+    @media (min-width: $tablet-width) {
+      grid-column: 2 span;
+      border: none;
+    }
+  }
+
+  &--textarea {
+    width: 100%;
+  }
+
+  &--radio,
+  &--checkbox {
+    padding-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
 
     @media (min-width: $desktop-width) {
-      &:first-child {
-        &::after {
-          right: calc(100px / -2);
-        }
-      }
+      padding-bottom: 26px;
+    }
+  }
 
-      &:not(:first-child, :nth-child(2)) > .form__title::before,
-      &:not(:first-child, :nth-child(2)) > .form__title::after {
-        width: 280px;
-      }
+  &--radio .form__title {
+    margin-bottom: 13px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 12px;
+      margin-bottom: 21px;
     }
 
-    &--checkbox,
-    &--textarea {
-      @media (min-width: $tablet-width) {
-        grid-column: 2 span;
-        border: none;
-      }
+    @media (min-width: $desktop-width) {
+      margin-top: 18px;
+      margin-bottom: 38px;
+    }
+  }
+
+  &--checkbox .form__title {
+    margin-bottom: 13px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 4px;
+      margin-bottom: 21px;
     }
 
-    &--textarea {
-      width: 100%;
+    @media (min-width: $desktop-width) {
+      margin-bottom: 52px;
+    }
+  }
+
+  &--textarea .form__title {
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 18px;
+      margin-bottom: 28px;
     }
   }
 }
@@ -85,11 +151,12 @@
   width: 100%;
   text-align: center;
   margin-top: 0;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
     margin-bottom: 28px;
-    margin-top: 12px;
+    margin-top: 8px;
     position: relative;
     box-sizing: border-box;
   }
@@ -97,21 +164,39 @@
 
 .form__radio-wrapper,
 .form__checkbox-wrapper {
+  @include display-flex(start, center, start, column);
+  flex-wrap: wrap;
+  margin: 0 auto;
+  box-sizing: border-box;
+
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
   }
 }
 
 .form__radio-wrapper {
+  @media (min-width: $tablet-width) {
+    justify-content: start;
+    padding-left: 36px;
+    padding-right: 22px;
+  }
+
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    padding-left: 52px;
+    padding-right: 12px;
   }
 }
 
 .form__checkbox-wrapper {
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    padding: 0 84px;
+  }
+
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+    padding: 0 12px;
   }
 }
 
@@ -119,14 +204,65 @@
   margin: 16px 0;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+
+  &--radio {
+    &:nth-child(2) {
+      @media (min-width: $tablet-width) {
+        text-align: left;
+      }
+
+      @media (min-width: $desktop-width) {
+        text-align: center;
+      }
+    }
+
+    &:first-child,
+    &:nth-child(2n + 1) {
+      @media (min-width: $tablet-width) {
+        margin-right: 16px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      flex-direction: row;
+      min-width: calc(280px - 46px);
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: center;
+      margin-right: 10px;
+    }
+  }
 
   &--checkbox {
-    flex-direction: row;
-    justify-content: start;
+    @media (min-width: $tablet-width) {
+      min-width: calc(224px - 46px);
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: calc(153px - 46px);
+    }
+  }
+
+  &--textarea {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 18px;
+    }
   }
 }
 
 .form__wrapper {
+  margin-bottom: 20px;
   width: 100%;
   grid-column: 2 span;
   display: flex;
@@ -134,12 +270,16 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-}
 
+  @media (min-width: $desktop-width) {
+    padding: 0 96px;
+  }
+}
 
 .form__notice {
   margin-top: 3px;
@@ -153,10 +293,24 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    margin-top: 10px;
     font-size: 14px;
   }
 }
 
 .form__button {
-  margin: 0;
+  margin: 18px auto 0;
+  padding: 0;
+  width: 100%;
+  max-width: 280px;
+  font-size: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    max-width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 384px;
+  }
 }

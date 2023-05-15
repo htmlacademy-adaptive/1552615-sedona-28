@@ -41,7 +41,7 @@
 }
 
 .modal__button-wrapper {
-  @include flex-center;
+  @include display-flex(center, center, center, column);
   width: 100%;
   height: 98px;
   background-color: $light-grey;

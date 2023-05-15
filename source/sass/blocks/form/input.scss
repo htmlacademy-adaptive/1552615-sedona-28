@@ -1,6 +1,6 @@
 .input {
   padding: 16px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: bold;
   background-color: $light-grey;
@@ -8,6 +8,16 @@
   border: none;
   display: block;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: $hover-grey;
+  }
+
+  &:focus {
+    background-color: $white;
+    outline: 4px solid $light-grey;
+    outline-offset: -4px;
+  }
 
   &::placeholder {
     font-family: "PT Sans Bold", "Arial", sans-serif;

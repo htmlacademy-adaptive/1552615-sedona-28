@@ -2,18 +2,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  line-height: 0;
 }
 
 @mixin link-reset {
   color: $black;
   text-decoration: none;
-}
-
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 @mixin display-flex($align, $justify, $text, $direction) {
