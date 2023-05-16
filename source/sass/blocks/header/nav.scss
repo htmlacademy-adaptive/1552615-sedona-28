@@ -20,7 +20,7 @@
     top: 50%;
     left: 50%;
     margin-top: -11px;
-    margin-left: -11.5px;
+    margin-left: -14px;
     background-color: $grey-blue;
   }
 
@@ -30,12 +30,12 @@
 
   &--closed {
     &::after {
-      @include absolute-element(26px, 25px);
+      @include absolute-element(24px, 23px);
       mask: url("../../../img/icons/sprite.svg#icon-cross") no-repeat;
       top: 50%;
       left: 50%;
-      margin-top: -13px;
-      margin-left: -12.5px;
+      margin-top: -12px;
+      margin-left: -15px;
       background-color: $white;
     }
   }
@@ -72,6 +72,7 @@
 
   &--nojs {
     position: static;
+    z-index: 100;
   }
 
   &--closed {
@@ -89,7 +90,7 @@
   left: 50%;
   margin-left: calc(185px / -2);
   background-color: transparent;
-  z-index: 50;
+  z-index: 10;
 
   @media (min-width: $tablet-width) {
     order: 0;
@@ -98,4 +99,10 @@
 
 .nav__logo {
   align-self: flex-start;
+}
+
+.nav__list--nojs + .nav__logo-link {
+  @media (max-width: 320px) {
+    display: none;
+  }
 }

@@ -17,7 +17,7 @@
   <header class="header container">
     <nav class="header__nav nav">
       <button class="nav__button"></button>
-      <ul class="nav__list nav__list--closed">
+      <ul class="nav__list nav__list--nojs">
         <li class="nav__item nav-item">
           <a href="./index.html" class="nav-item__link">
             <span class="nav-item__text">Главная</span>
@@ -49,7 +49,10 @@
     <h1 class="visually-hidden">Каталог фото и видео</h1>
 
     <section class="intro container">
-      <img src="./img/icons/SEDONA.svg" alt="" class="intro__icon ">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="./img/icons/text-sedona.svg">
+        <img src="./img/icons/SEDONA.svg" alt="Седона, я люблю тебя!" class="intro__icon ">
+      </picture>
     </section>
 
     <section class="photos">

@@ -19,7 +19,7 @@
 
   &--xl .photo-description__title {
     @media (min-width: $desktop-width) {
-      margin: 24px 0 2px;
+      margin: 20px 0 1px;
     }
   }
 }
@@ -48,14 +48,14 @@
 }
 
 .photo-description__title {
-  margin: 10px 0 2px;
+  margin: 14px 0 2px;
 
   @media (min-width: $tablet-width) {
     margin: 21px 0 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 22px 0 8px;
+    margin: 18px 0 4px;
   }
 }
 
@@ -64,7 +64,7 @@
   font-size: 14px;
 
   @media (min-width: $desktop-width) {
-    margin: 2px 0 17px;
+    margin: 2px 0 16px;
   }
 }
 
@@ -92,17 +92,17 @@
 
   @media (min-width: $desktop-width) {
     background-color: $white;
-  }
-}
-
-.photo-description__icon {
-  fill: $transparent-black;
-
-  @media (min-width: $desktop-width) {
-    fill: $white;
+    margin-right: 9px;
+    margin-bottom: 2px;
   }
 }
 
 .photo-description__like-wrapper {
   @include display-flex(center, start, center, row);
+}
+
+.photo-description__like-count {
+  @media (min-width: $desktop-width) {
+    margin-top: 3px;
+  }
 }
