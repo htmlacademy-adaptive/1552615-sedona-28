@@ -31,3 +31,7 @@
   height: $height;
   position: absolute;
 }
+
+@mixin animation($prop) {
+  transition: $prop 500ms ease-in-out;
+}

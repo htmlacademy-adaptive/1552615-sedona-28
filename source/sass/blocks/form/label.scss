@@ -17,6 +17,10 @@
     line-height: 26px;
     text-transform: none;
   }
+
+  &:focus {
+    outline: 1px solid $grey;
+  }
 }
 
 .label__input {
@@ -42,13 +46,15 @@
 
 .label__radio {
   @include absolute-element(46px, 46px);
+  @include animation(background-color);
   top: 50%;
   margin-left: -46px;
   margin-top: -23px;
   background-color: $light-grey;
   border-radius: 50%;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $hover-grey;
   }
 
@@ -69,6 +75,7 @@
 
 .label__checkbox {
   @include absolute-element(46px, 46px);
+  @include animation(background-color);
   margin-left: -46px;
   top: 50%;
   margin-top: -23px;
@@ -87,7 +94,9 @@
 }
 
 .label:hover > .label__radio,
-.label:hover > .label__checkbox {
+.label:hover > .label__checkbox,
+.label:focus > .label__radio,
+.label:focus > .label__checkbox {
   background-color: $hover-grey;
 }
 

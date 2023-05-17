@@ -1,4 +1,5 @@
 .input {
+  @include animation(background-color);
   padding: 16px;
   font-size: 16px;
   line-height: 26px;

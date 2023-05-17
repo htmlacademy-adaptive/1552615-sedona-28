@@ -6,6 +6,7 @@
 .footer-developer__link {
   @include link-reset;
   @include display-flex(center, center, center, row);
+  @include animation(color);
   color: $black;
 }
 
@@ -14,6 +15,7 @@
 }
 
 .footer-developer__logo {
+  @include animation(background-color);
   margin: 0;
   margin-left: 6px;
   padding: 0;

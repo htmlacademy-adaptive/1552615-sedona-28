@@ -4,6 +4,7 @@
 }
 
 .nav__button {
+  @include animation(background-color);
   position: absolute;
   top: 0;
   right: 0;

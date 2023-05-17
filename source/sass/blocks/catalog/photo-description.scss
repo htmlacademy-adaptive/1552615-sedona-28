@@ -69,6 +69,7 @@
 }
 
 .photo-description__button {
+  @include animation(opacity);
   padding: 0;
   margin-right: 14px;
   width: 22px;
