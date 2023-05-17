@@ -40,3 +40,11 @@
 .footer-developer:active .footer-developer__logo {
   background-color: $clicked-developer-footer;
 }
+
+.footer-developer__link:focus {
+  color: $grey-blue;
+}
+
+.footer-developer__link:focus .footer-developer__logo {
+  background-color: $grey-blue;
+}
