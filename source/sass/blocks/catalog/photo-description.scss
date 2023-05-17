@@ -79,7 +79,8 @@
   background-color: $transparent-black;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
 

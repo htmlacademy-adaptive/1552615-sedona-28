@@ -17,10 +17,6 @@
     line-height: 26px;
     text-transform: none;
   }
-
-  &:focus {
-    outline: 1px solid $grey;
-  }
 }
 
 .label__input {
@@ -95,8 +91,8 @@
 
 .label:hover > .label__radio,
 .label:hover > .label__checkbox,
-.label:focus > .label__radio,
-.label:focus > .label__checkbox {
+.label__input:focus + .label__radio,
+.label__input:focus + .label__checkbox {
   background-color: $hover-grey;
 }
 

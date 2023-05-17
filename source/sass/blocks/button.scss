@@ -12,7 +12,8 @@
   cursor: pointer;
 
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $hover-grey-blue;
   }
 

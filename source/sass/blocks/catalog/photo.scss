@@ -64,7 +64,8 @@
   }
 }
 
-.photo:hover .photo__image {
+.photo:hover .photo__image,
+.photo__link:focus .photo__image {
   opacity: 0.8;
 }
 

@@ -112,7 +112,8 @@
   background-color: $clicked-grey-blue;
 }
 
-.presentation__link:hover .presentation__video {
+.presentation__link:hover .presentation__video,
+.presentation__link:focus .presentation__video {
   opacity: 0.8;
 }
 
