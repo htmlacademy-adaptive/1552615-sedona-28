@@ -1,6 +1,7 @@
 .button {
   @include link-reset;
   @include display-flex(center, center, center, row);
+  @include animation(background-color);
   margin: 0 auto;
   height: 58px;
   background-color: $grey-blue;
@@ -10,7 +11,9 @@
   border: none;
   cursor: pointer;
 
-  &:hover {
+
+  &:hover,
+  &:focus {
     background-color: $hover-grey-blue;
   }
 

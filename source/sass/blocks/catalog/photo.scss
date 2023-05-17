@@ -45,6 +45,7 @@
   }
 
   .photo__image {
+    @include animation(opacity);
     width: 100%;
     height: auto;
     max-height: 280px;
@@ -63,7 +64,8 @@
   }
 }
 
-.photo:hover .photo__image {
+.photo:hover .photo__image,
+.photo__link:focus .photo__image {
   opacity: 0.8;
 }
 

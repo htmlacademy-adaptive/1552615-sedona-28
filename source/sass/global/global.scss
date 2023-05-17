@@ -18,3 +18,25 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.mobile-transfer {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.tablet-transfer {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.desktop-transfer {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

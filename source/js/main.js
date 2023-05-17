@@ -4,6 +4,7 @@ const logo = document.querySelector(".nav__logo-link");
 const TABLET_WIDTH = 768;
 
 const setMenuClosed = () => {
+  menu.classList.remove("nav__list--nojs");
   menu.classList.add("nav__list--closed");
   logo.style.display = "block";
   button.classList.remove("nav__button--closed");
@@ -17,6 +18,7 @@ const setMenuOpened = () => {
 
 const setNotMobile = () => {
   if (!menu.classList.contains("nav__list--closed")) {
+    menu.classList.remove("nav__list--nojs");
     menu.classList.remove("nav__list--closed");
   }
   if (logo.style.display === "none") {

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
@@ -18,7 +18,7 @@
   <header class="header container">
     <nav class="header__nav nav">
       <button class="nav__button"></button>
-      <ul class="nav__list nav__list--closed">
+      <ul class="nav__list nav__list--nojs">
         <li class="nav__item nav-item">
           <a href="./index.html" class="nav-item__link ">
             <span class="nav-item__text">Главная</span>
@@ -40,7 +40,7 @@
           </a>
         </li>
       </ul>
-      <a href="#" class="nav__logo-link">
+      <a href="./index.html" class="nav__logo-link">
         <img src="./img/icons/logo.svg" alt="Логотип Седоны" class="nav__logo" width="185" height="96">
       </a>
     </nav>
@@ -50,7 +50,10 @@
     <h1 class="visually-hidden">Форма отзыва</h1>
 
     <section class="intro container">
-      <img src="./img/icons/SEDONA.svg" alt="" class="intro__icon">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="./img/icons/text-sedona.svg">
+        <img src="./img/icons/SEDONA.svg" alt="Седона, я люблю тебя!" class="intro__icon ">
+      </picture>
     </section>
 
     <section class="review container">
@@ -108,8 +111,8 @@
           <h3 class="form__title title">Ваше общее впечатление:</h3>
           <div class="form__radio-wrapper">
             <label for="good" class="form__label form__label--radio label label--radio">
-              <input type="radio" class="label__input label__input--radio input" id="good" name="impression" value="good"
-                checked>
+              <input type="radio" class="label__input label__input--radio input" id="good" name="impression"
+                value="good" checked>
               <span class="label__radio"></span>
               <span class="label__text">Скорее положительное</span>
             </label>
@@ -202,18 +205,18 @@
       </li>
       <li class="footer__item footer-item">
         <ul class="footer-item__list">
-          <li class="footer-item__social footer-item__social--vk social">
-            <a href="#" class="social__link">
+          <li class="footer-item__social">
+            <a href="https://vk.ru/feed" class="footer-item__link footer-item__link--vk">
               <span class="social__text visually-hidden">Вконтакте</span>
             </a>
           </li>
-          <li class="footer-item__social footer-item__social--telegram social">
-            <a href="#" class="social__link">
+          <li class="footer-item__social">
+            <a href="#" class="footer-item__link footer-item__link--telegram" >
               <span class="social__text visually-hidden">Telegram</span>
             </a>
           </li>
-          <li class="footer-item__social footer-item__social--youtube social">
-            <a href="#" class="social__link">
+          <li class="footer-item__social">
+            <a href="#" class="footer-item__link footer-item__link--youtube">
               <span class="social__text visually-hidden">Youtube</span>
             </a>
           </li>

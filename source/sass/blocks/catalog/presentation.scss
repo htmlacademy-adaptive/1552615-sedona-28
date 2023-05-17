@@ -39,7 +39,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 34px;
+    margin-top: 2px;
+    margin-bottom: 32px;
   }
 }
 
@@ -73,6 +74,7 @@
 }
 
 .presentation__video {
+  @include animation(opacity);
   width: 100%;
   height: 100%;
 
@@ -92,6 +94,7 @@
 }
 
 .presentation__play-btn {
+  @include animation(background-color);
   @include absolute-element(48px, 54px);
   top: 50%;
   margin-top: -27px;
@@ -109,7 +112,8 @@
   background-color: $clicked-grey-blue;
 }
 
-.presentation__link:hover .presentation__video {
+.presentation__link:hover .presentation__video,
+.presentation__link:focus .presentation__video {
   opacity: 0.8;
 }
 
