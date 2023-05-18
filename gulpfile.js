@@ -45,7 +45,7 @@ const scripts = () => {
     .pipe(browser.stream());
 }
 
-// Images
+// Images 
 
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
