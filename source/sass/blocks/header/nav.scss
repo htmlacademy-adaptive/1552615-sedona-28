@@ -12,7 +12,7 @@
   width: 56px;
   background-color: transparent;
   border: none;
-  z-index: 100;
+  z-index: 200;
   cursor: pointer;
 
   &::after {
@@ -64,16 +64,11 @@
   flex-wrap: wrap;
   width: 100%;
   position: absolute;
-  z-index: 10;
+  z-index: 20;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  &--nojs {
-    position: static;
-    z-index: 100;
   }
 
   &--closed {
@@ -95,15 +90,10 @@
 
   @media (min-width: $tablet-width) {
     order: 0;
+    z-index: 50;
   }
 }
 
 .nav__logo {
   align-self: flex-start;
-}
-
-.nav__list--nojs + .nav__logo-link {
-  @media (max-width: 320px) {
-    display: none;
-  }
 }

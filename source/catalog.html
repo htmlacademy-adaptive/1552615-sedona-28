@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.min.css">
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="./fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <title>Фото и видео</title>
 </head>
 
@@ -40,7 +42,9 @@
         </li>
       </ul>
       <a href="./index.html" class="nav__logo-link">
-        <img src="./img/icons/logo.svg" alt="Логотип Седоны" class="nav__logo" width="185" height="96">
+        <svg class="nav__logo" width="185" height="96">
+          <use xlink:href="./img/icons/sprite.svg#logo"></use>
+        </svg>
       </a>
     </nav>
   </header>
@@ -50,8 +54,8 @@
 
     <section class="intro container">
       <picture>
-        <source media="(min-width: 1200px)" srcset="./img/icons/text-sedona.svg">
-        <img src="./img/icons/SEDONA.svg" alt="Седона, я люблю тебя!" class="intro__icon ">
+        <source media="(min-width: 1200px)" srcset="./img/icons/text-sedona-desktop.svg">
+        <img src="./img/icons/text-sedona.svg" alt="Седона, я люблю тебя!" class="intro__icon ">
       </picture>
     </section>
 

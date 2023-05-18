@@ -1,28 +1,29 @@
 .intro {
+  @include display-flex(center, center, center, row);
   margin: 0;
   padding: 0;
   margin-top: 56px;
   width: 100%;
-  min-height: 158px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url("../../img/catalog/desktop/back-desktop.jpg") -400px -145px no-repeat;
+  height: 158px;
+  overflow: hidden;
+  background: url("../../img/catalog/mobile/back-desktop.jpg") center -56px no-repeat;
   position: relative;
+  box-sizing: border-box;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/catalog/desktop/back-desktop@2x.jpg");
+    background-image: url("../../img/catalog/mobile/back-desktop@2x.jpg");
     background-size: 1200px auto;
   }
 
   @media (min-width: $tablet-width) {
+    background: url("../../img/catalog/desktop/back-desktop.jpg") no-repeat;
     background-position: center -228px;
     min-height: 290px;
   }
 
   @media (min-width: $desktop-width) {
     background-position: 0 -217px;
-    min-height: 301px;
+    min-height: 300px;
   }
 
   &--main {
@@ -50,29 +51,28 @@
     content: "";
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 1200px;
     height: 57px;
-    background: url("../../img/icons/intro-triangle.svg") center center no-repeat;
+    mask: url("../../img/icons/sprite.svg#intro-triangle") center center no-repeat;
+    background-color: $white;
     position: absolute;
-    left: 0;
-    bottom: -1px;
+    left: 50%;
+    margin-left: -600px;
+    bottom: 0;
   }
 }
 
 .intro__icon {
-  margin: 52px auto 67px;
+  margin: 52px auto 64px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
     width: 457px;
-    margin-left: 9.8em;
     margin-top: 46px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
-    margin-bottom: 18px;
-    margin-left: 0;
+    margin: 0 auto 18px;
     width: 460px;
   }
 
@@ -89,7 +89,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin: auto;
+      margin: 77px auto 90px;
     }
   }
 }

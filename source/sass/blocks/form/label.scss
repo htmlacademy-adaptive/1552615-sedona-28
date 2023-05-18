@@ -7,6 +7,40 @@
   position: relative;
   cursor: pointer;
 
+  &--phone {
+    &::before {
+      @include absolute-element(58px, 58px);
+      background-color: $darker-grey;
+      bottom: 0;
+      right: 0;
+    }
+
+    &::after {
+      @include absolute-element(18px, 18px);
+      mask: url("../../../img/icons/sprite.svg#phone-icon");
+      background-color: $label-icon-black;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+
+  &--email {
+    &::before {
+      @include absolute-element(58px, 58px);
+      background-color: $darker-grey;
+      bottom: 0;
+      right: 0;
+    }
+
+    &::after {
+      @include absolute-element(16px, 12px);
+      mask: url("../../../img/icons/sprite.svg#email-icon");
+      background-color: $label-icon-black;
+      right: 20px;
+      bottom: 24px;
+    }
+  }
+
   &--checkbox,
   &--radio {
     margin: 0;
