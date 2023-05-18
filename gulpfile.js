@@ -45,7 +45,7 @@ const scripts = () => {
     .pipe(browser.stream());
 }
 
-// Images 
+// Images
 
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
@@ -58,7 +58,7 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-// WebP
+// WebP 
 
 const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
