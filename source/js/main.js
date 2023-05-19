@@ -2,6 +2,7 @@ const button = document.querySelector(".nav__button");
 const menu = document.querySelector(".nav__list");
 const logo = document.querySelector(".nav__logo-link");
 const TABLET_WIDTH = 768;
+const map = document.querySelector(".search__map");
 
 const setMenuClosed = () => {
   menu.classList.add("nav__list--closed");
@@ -47,3 +48,7 @@ if (document.documentElement.clientWidth < TABLET_WIDTH) {
 } else {
   setNotMobile();
 };
+
+if (map.classList.contains("search__map--nojs")) {
+  map.classList.remove("search__map--nojs");
+}
