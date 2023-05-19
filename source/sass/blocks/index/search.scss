@@ -52,10 +52,10 @@
 }
 
 .search__map-wrapper {
+  position: relative;
   width: 100%;
   height: 350px;
   box-sizing: border-box;
-  background: url("../../../img/icons/map-marker.svg") center center no-repeat;
 }
 
 .search__map,
@@ -63,4 +63,17 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.search__map--nojs {
+  display: none;
+}
+
+.search__map-marker {
+  @include absolute-element(27px, 27px);
+  top: 50%;
+  left: 50%;
+  margin-top: calc(27px / -2);
+  margin-left: calc(27px / -2);
+  z-index: 50;
 }
