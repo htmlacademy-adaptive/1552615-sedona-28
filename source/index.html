@@ -181,8 +181,15 @@
         <noscript>
           <picture>
             <source srcset="./img/index/desktop/map-desktop.webp 1x, ./img/index/desktop/map-desktop@2x.webp 2x">
-            <img src="./img/index/desktop/map-desktop.jpg" srcset="./img/index/desktop/map-desktop@2x.jpg 2x"
-              alt="Карта Седоны" class="search__nojs-map" width="1200" height="350">
+            <source media="(min-width: 768px)"
+              srcset="./img/index/tablet/map-tablet.webp 1x, ./img/index/tablet/map-tablet@2x.webp 2x">
+            <source srcset="./img/index/mobile/map-mobile.webp 1x, ./img/index/mobile/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)"
+              srcset="./img/index/desktop/map-desktop.jpg 1x, ./img/index/desktop/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/index/tablet/map-tablet.jpg 1x, ./img/index/tablet/map-tablet@2x.jpg 2x">
+            <img src="./img/index/mobile/map-mobile.jpg" srcset="./img/index/mobile/map-mobile@2x.jpg 2x"
+              alt="Карта Седоны" class="search__nojs-map" width="320" height="350">
           </picture>
         </noscript>
       </div>
