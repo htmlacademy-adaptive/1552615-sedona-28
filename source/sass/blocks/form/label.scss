@@ -44,7 +44,6 @@
   &--checkbox,
   &--radio {
     margin: 0;
-    padding: 18px 0;
     margin-left: 46px;
     font-family: "PT Sans Bold", "Arial", sans-serif;
     font-size: 18px;
@@ -138,6 +137,11 @@
 .label:active > .label__input:checked + .label__radio::after,
 .label:active > .label__input:checked + .label__checkbox::after {
   background-color: $clicked-checked-grey;
+}
+
+.label__input:disabled + .label__radio,
+.label__input:disabled + .label__checkbox {
+  background-color: $notice-grey;
 }
 
 .label__text {

@@ -22,20 +22,26 @@
   width: 100%;
   padding: 45px 41px 30px;
   min-height: 280px;
-  max-height: 347px;
   max-width: 400px;
   background-color: $white;
   position: absolute;
-  margin-top: calc(100% / -2);
+  margin-top: 0;
   margin-left: calc(100% / -2);
-  top: 50%;
+  top: auto;
+  bottom: 678px;
   left: 50%;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    margin-top: calc(347px / -2);
     margin-left: -200px;
+    top: auto;
+    bottom: 344px;
     padding-top: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: auto;
+    bottom: 406px;
   }
 
   &--success {
@@ -43,15 +49,18 @@
     padding-top: 39px;
     max-width: 640px;
     min-height: 323px;
+    bottom: 348px;
+    box-sizing: border-box;
 
     @media (min-width: $tablet-width) {
-      margin-top: calc(347px / -2);
       margin-left: calc(640px / -2);
-      padding-top: 51px;
+      bottom: 464px;
+      padding-top: 44px;
     }
 
     @media (min-width: $desktop-width) {
       padding-top: 42px;
+      bottom: 504px;
     }
 
     .modal__description {
@@ -60,7 +69,7 @@
 
       @media (min-width: $tablet-width) {
         width: 100%;
-        margin-bottom: 53px;
+        margin-bottom: 52px;
       }
 
       @media (min-width: $desktop-width) {
@@ -70,7 +79,7 @@
 
     .modal__title {
       @media (min-width: $tablet-width) {
-        margin-bottom: 29px;
+        margin-bottom: 22px;
       }
 
       @media (min-width: $desktop-width) {
@@ -119,10 +128,6 @@
   @media (min-width: $tablet-width) {
     height: 146px;
   }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 21px;
-  }
 }
 
 .modal__button {
@@ -135,7 +140,7 @@
   @media (min-width: $tablet-width) {
     font-size: 21px;
     width: 272px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   &--success {
@@ -143,6 +148,7 @@
 
     @media (min-width: $tablet-width) {
       width: 458px;
+      margin-bottom: 0;
     }
   }
 }
