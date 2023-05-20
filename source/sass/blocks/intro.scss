@@ -1,22 +1,23 @@
 .intro {
-  @include display-flex(center, center, center, row);
-  margin: 0;
+  @include display-flex(center, center, center, column);
+  margin: 0 auto;
   padding: 0;
   margin-top: 56px;
   width: 100%;
-  height: 158px;
+  min-height: 158px;
   overflow: hidden;
-  background: url("../../img/catalog/mobile/back-desktop.jpg") center -56px no-repeat;
+  background: url("../../img/catalog/mobile/back-desktop.jpg") center -56px no-repeat $notice-grey;
+  background-color: $notice-grey;
   position: relative;
   box-sizing: border-box;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/catalog/mobile/back-desktop@2x.jpg");
+    background-image: url("../../img/catalog/mobile/back-desktop@2x.jpg") $notice-grey;
     background-size: 1200px auto;
   }
 
   @media (min-width: $tablet-width) {
-    background: url("../../img/catalog/desktop/back-desktop.jpg") no-repeat;
+    background: url("../../img/catalog/desktop/back-desktop.jpg") no-repeat $notice-grey;
     background-position: center -228px;
     min-height: 290px;
   }
@@ -29,19 +30,19 @@
   &--main {
     margin-top: 56px;
     min-height: 389px;
-    background: url("../../img/index/mobile/back-mobile.jpg") center 0 no-repeat;
+    background: url("../../img/index/mobile/back-mobile.jpg") center 0 no-repeat $notice-grey;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/index/mobile/back-mobile@2x.jpg");
+      background-image: url("../../img/index/mobile/back-mobile@2x.jpg") $notice-grey;
       background-size: 901px auto;
     }
 
     @media (min-width: $tablet-width) {
       min-height: 518px;
-      background: url("../../img/index/desktop/back-desktop.jpg") center 0 no-repeat;
+      background: url("../../img/index/desktop/back-desktop.jpg") center 0 no-repeat $notice-grey;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/index/desktop/back-desktop@2x.jpg");
+        background-image: url("../../img/index/desktop/back-desktop@2x.jpg") $notice-grey;
         background-size: 1200px auto;
       }
     }
@@ -63,6 +64,7 @@
 }
 
 .intro__icon {
+  @include display-flex(center, center, center, column);
   margin: 52px auto 64px;
   padding: 0;
 

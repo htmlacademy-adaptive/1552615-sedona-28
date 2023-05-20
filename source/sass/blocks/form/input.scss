@@ -26,4 +26,8 @@
     line-height: 26px;
     color: $transparent-black;
   }
+
+  &:disabled {
+    background-color: $notice-grey;
+  }
 }

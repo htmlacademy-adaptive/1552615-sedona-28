@@ -23,26 +23,27 @@
       <ul class="nav__list nav__list--nojs">
         <li class="nav__item nav-item">
           <a href="./index.html" class="nav-item__link ">
-            <span class="nav-item__text">Главная</span>
+            Главная
           </a>
         </li>
         <li class="nav__item nav-item">
           <a href="./catalog.html" class="nav-item__link">
-            <span class="nav-item__text">Фото и видео</span>
+            Фото и видео
           </a>
         </li>
         <li class="nav__item nav-item nav-item--active">
           <a href="./form.html" class="nav-item__link">
-            <span class="nav-item__text">Форма отзыва</span>
+            Форма отзыва
           </a>
         </li>
         <li class="nav__item nav-item">
           <a href="./index.html" class="nav-item__link">
-            <span class="nav-item__text">HTML Academy</span>
+            HTML Academy
           </a>
         </li>
       </ul>
       <a href="./index.html" class="nav__logo-link">
+        <span class="visually-hidden">Логотип Седоны</span>
         <svg class="nav__logo" width="185" height="96">
           <use xlink:href="./img/icons/sprite.svg#logo"></use>
         </svg>
@@ -52,14 +53,13 @@
 
   <main class="main-container">
     <h1 class="visually-hidden">Форма отзыва</h1>
-
     <section class="intro container">
+      <h2 class="visually-hidden">Интро</h2>
       <picture>
         <source media="(min-width: 1200px)" srcset="./img/icons/text-sedona-desktop.svg">
         <img src="./img/icons/text-sedona.svg" alt="Седона, я люблю тебя!" class="intro__icon ">
       </picture>
     </section>
-
     <section class="review container">
       <div class="review__header review-header">
         <h2 class="review-header__title title">Оставьте свой отзыв</h2>
@@ -82,7 +82,6 @@
             <input type="text" class="label__input input" id="surname" name="surname" value="Викторович">
           </label>
         </fieldset>
-
         <fieldset class="form__section form__section--contacts  container">
           <h3 class="form__title title">Контактная информация:</h3>
           <label for="phone" class="form__label label label--phone">
@@ -96,18 +95,17 @@
               placeholder="Введите e-mail">
           </label>
         </fieldset>
-
         <fieldset class="form__section form__section--radio container">
           <h3 class="form__title title">Ваше общее впечатление:</h3>
           <div class="form__radio-wrapper">
             <label for="good" class="form__label form__label--radio label label--radio">
               <input type="radio" class="label__input label__input--radio input" id="good" name="impression"
-                value="good" checked>
+                value="good" checked >
               <span class="label__radio"></span>
               <span class="label__text">Скорее положительное</span>
             </label>
             <label for="bad" class="form__label form__label--radio label label--radio">
-              <input type="radio" class="label__input label__input--radio input" id="bad" name="impression" value="bad">
+              <input type="radio" class="label__input label__input--radio input" id="bad" name="impression" value="bad" >
               <span class="label__radio"></span>
               <span class="label__text">Скорее отрицательное</span>
             </label>
@@ -115,11 +113,10 @@
               <input type="radio" class="label__input label__input--radio input" id="unknown" name="impression"
                 value="unknown">
               <span class="label__radio"></span>
-              <span class="label__text">Затрудняюсь ответить
+              <span class="label__text">Затрудняюсь ответить</span>
             </label>
           </div>
         </fieldset>
-
         <fieldset class="form__section form__section--checkbox container">
           <h3 class="form__title title">Посещенные достопримечательности:</h3>
           <div class="form__checkbox-wrapper">
@@ -131,7 +128,7 @@
             </label>
             <label for="mountain" class="form__label form__label--checkbox label label--checkbox">
               <input type="checkbox" class="label__input label__input--checkbox input" id="mountain" name="mountain"
-                checked>
+                checked >
               <span class="label__checkbox"></span>
               <span class="label__text">Гора-Колокол</span>
             </label>
@@ -147,38 +144,35 @@
             </label>
           </div>
         </fieldset>
-
         <fieldset class="form__section form__section--textarea container">
           <h3 class="form__title title">Опишите свои эмоции:</h3>
-          <label for="emotions" class="form__label form__label--textarea">
+          <label for="emotions" class="form__label form__label--textarea label">
             <span class="visually-hidden">Форма для описания эмоций</span>
             <textarea class="label__textarea input" name="emotions" id="emotions" cols="30" rows="10"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
-
         <div class="form__wrapper">
           <input type="submit" class="form__button button" value="Отправить отзыв">
           <span class="form__notice">* &mdash; обязательные поля</span>
         </div>
       </form>
     </section>
-
     <section class="modal modal--failed container">
       <div class="modal__overlay">
         <div class="modal__wrapper container">
-          <h2 class="modal__title title">Что-то пошло<br class="tablet-transfer"/> не так!</h2>
-          <p class="modal__description">Проверьте поля, выделенные красным,<br class="tablet-transfer"/> скорее всего вы забыли их заполнить</p>
+          <h2 class="modal__title title">Что-то пошло&nbsp;<br class="tablet-transfer">не так!</h2>
+          <p class="modal__description">Проверьте поля, выделенные красным,<br class="tablet-transfer"> скорее всего
+            вы<br class="mobile-transfer"> забыли их заполнить</p>
           <button class="modal__button button button--failed-modal">Ок</button>
         </div>
       </div>
     </section>
-
     <section class="modal modal--success container">
       <div class="modal__overlay">
         <div class="modal__wrapper modal__wrapper--success container">
           <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
-          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br />В ближайшее время
+          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br>В ближайшее время
             мы опубликуем его на сайте.</p>
           <div class="modal__button-wrapper">
             <button class="modal__button modal__button--success button">Закрыть окно</button>
@@ -197,17 +191,17 @@
         <ul class="footer-item__list">
           <li class="footer-item__social">
             <a href="https://vk.ru/feed" class="footer-item__link footer-item__link--vk">
-              <span class="social__text visually-hidden">Вконтакте</span>
+              <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="footer-item__social">
-            <a href="#" class="footer-item__link footer-item__link--telegram" >
-              <span class="social__text visually-hidden">Telegram</span>
+            <a href="#" class="footer-item__link footer-item__link--telegram">
+              <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-item__social">
             <a href="#" class="footer-item__link footer-item__link--youtube">
-              <span class="social__text visually-hidden">Youtube</span>
+              <span class="visually-hidden">Youtube</span>
             </a>
           </li>
         </ul>
@@ -215,13 +209,17 @@
       <li class="footer__item footer-developer">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-developer__link">
           <span class="footer-developer__text description">Разработано</span>
-          <span class="footer-developer__logo"></span>
+          <p class="footer-developer__logo">
+            <span class="visually-hidden">Иконка HTMLAcademy</span>
+          </p>
         </a>
       </li>
     </ul>
   </footer>
+
   <script src="./js/form.js"></script>
   <script src="./js/main.js"></script>
+
 </body>
 
 </html>

@@ -19,6 +19,13 @@ html {
   overflow: hidden;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .mobile-transfer {
   @media (min-width: $tablet-width) {
     display: none;

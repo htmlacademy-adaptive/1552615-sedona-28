@@ -16,32 +16,34 @@
 </head>
 
 <body class="page-body container">
+
   <header class="header container">
     <nav class="header__nav nav">
       <button class="nav__button"></button>
       <ul class="nav__list">
         <li class="nav__item nav-item nav-item--active">
           <a href="#" class="nav-item__link">
-            <span class="nav-item__text">Главная</span>
+            Главная
           </a>
         </li>
         <li class="nav__item nav-item">
           <a href="./catalog.html" class="nav-item__link">
-            <span class="nav-item__text">Фото и видео</span>
+            Фото и видео
           </a>
         </li>
         <li class="nav__item nav-item">
           <a href="./form.html" class="nav-item__link">
-            <span class="nav-item__text">Форма отзыва</span>
+            Форма отзыва
           </a>
         </li>
         <li class="nav__item nav-item">
           <a href="#" class="nav-item__link">
-            <span class="nav-item__text">HTML Academy</span>
+            HTML Academy
           </a>
         </li>
       </ul>
       <a href="#" class="nav__logo-link">
+        <span class="visually-hidden">Логотип Седоны</span>
         <svg class="nav__logo" width="185" height="96">
           <use xlink:href="./img/icons/sprite.svg#logo"></use>
         </svg>
@@ -50,13 +52,12 @@
   </header>
 
   <main class="main-container container">
-    <h1 class="visually-hidden"></h1>
-
+    <h1 class="visually-hidden">Главная страница</h1>
     <section class="intro intro--main container">
+      <h2 class="visually-hidden">Интро</h2>
       <img src="./img/icons/text-sedona-index.svg" alt="" class="intro__icon intro__icon--main" width="282"
         height="214">
     </section>
-
     <section class="advantages container">
       <header class="advantages__header advantages-header">
         <h2 class="visually-hidden">Преимущества Седоны над Гранд Каньоном</h2>
@@ -79,7 +80,8 @@
                   srcset="./img/index/desktop/photo-city@1x.webp 1x, ./img/index/desktop/photo-city@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="./img/index/tablet/photo-city@1x.webp 1x, ./img/index/tablet/photo-city@2x.webp 2x">
-                <source srcset="./img/index/mobile/photo-city.webp 1x, ./img/index/mobile/photo-city@2x.webp 2x">
+                <source media="(max-width: 320px)"
+                  srcset="./img/index/mobile/photo-city.webp 1x, ./img/index/mobile/photo-city@2x.webp 2x">
                 <source media="(min-width: 1200px)"
                   srcset="./img/index/desktop/photo-city@1x.jpg 1x, ./img/index/desktop/photo-city@2x.jpg 2x">
                 <source media="(min-width: 768px)"
@@ -127,7 +129,8 @@
                   srcset="./img/index/desktop/photo-bridge@1x.webp 1x, ./img/index/desktop/photo-bridge@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="./img/index/tablet/photo-bridge@1x.webp 1x, ./img/index/tablet/photo-bridge@2x.webp 2x">
-                <source srcset="./img/index/mobile/photo-bridge.webp 1x, ./img/index/mobile/photo-bridge@2x.webp 2x">
+                <source media="(max-width: 320px)"
+                  srcset="./img/index/mobile/photo-bridge.webp 1x, ./img/index/mobile/photo-bridge@2x.webp 2x">
                 <source media="(min-width: 1200px)"
                   srcset="./img/index/desktop/photo-bridge@1x.jpg 1x, ./img/index/desktop/photo-bridge@2x.jpg 2x">
                 <source media="(min-width: 768px)"
@@ -136,7 +139,6 @@
                   alt="Красные скалы" class="advantage__image" width="520" height="260">
               </picture>
             </div>
-
           </div>
         </li>
         <li class="advantages__item advantage">
@@ -180,10 +182,12 @@
         </iframe>
         <noscript>
           <picture>
-            <source media="(min-width: 1200px)" srcset="./img/index/desktop/map-desktop.webp 1x, ./img/index/desktop/map-desktop@2x.webp 2x">
+            <source media="(min-width: 1200px)"
+              srcset="./img/index/desktop/map-desktop.webp 1x, ./img/index/desktop/map-desktop@2x.webp 2x">
             <source media="(min-width: 768px)"
               srcset="./img/index/tablet/map-tablet.webp 1x, ./img/index/tablet/map-tablet@2x.webp 2x">
-            <source srcset="./img/index/mobile/map-mobile.webp 1x, ./img/index/mobile/map-mobile@2x.webp 2x">
+            <source media="(max-width: 320px)"
+              srcset="./img/index/mobile/map-mobile.webp 1x, ./img/index/mobile/map-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)"
               srcset="./img/index/desktop/map-desktop.jpg 1x, ./img/index/desktop/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
@@ -209,17 +213,17 @@
         <ul class="footer-item__list">
           <li class="footer-item__social">
             <a href="https://vk.ru/feed" class="footer-item__link footer-item__link--vk">
-              <span class="social__text visually-hidden">Вконтакте</span>
+              <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="footer-item__social">
             <a href="#" class="footer-item__link footer-item__link--telegram">
-              <span class="social__text visually-hidden">Telegram</span>
+              <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-item__social">
             <a href="#" class="footer-item__link footer-item__link--youtube">
-              <span class="social__text visually-hidden">Youtube</span>
+              <span class="footer-item__text visually-hidden">Youtube</span>
             </a>
           </li>
         </ul>
@@ -227,13 +231,16 @@
       <li class="footer__item footer-developer">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-developer__link">
           <span class="footer-developer__text description">Разработано</span>
-          <span class="footer-developer__logo"></span>
+          <p class="footer-developer__logo">
+            <span class="visually-hidden">Иконка HTMLAcademy</span>
+          </p>
         </a>
       </li>
     </ul>
   </footer>
 
   <script src="./js/main.js"></script>
+
 </body>
 
 </html>

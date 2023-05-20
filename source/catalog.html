@@ -16,32 +16,34 @@
 </head>
 
 <body class="page-body container">
+
   <header class="header container">
     <nav class="header__nav nav">
       <button class="nav__button"></button>
       <ul class="nav__list nav__list--nojs">
         <li class="nav__item nav-item">
           <a href="./index.html" class="nav-item__link">
-            <span class="nav-item__text">Главная</span>
+            Главная
           </a>
         </li>
         <li class="nav__item nav-item nav-item--active">
           <a href="#" class="nav-item__link">
-            <span class="nav-item__text">Фото и видео</span>
+            Фото и видео
           </a>
         </li>
         <li class="nav__item nav-item">
           <a href="./form.html" class="nav-item__link">
-            <span class="nav-item__text">Форма отзыва</span>
+            Форма отзыва
           </a>
         </li>
         <li class="nav__item nav-item">
           <a href="#" class="nav-item__link">
-            <span class="nav-item__text">HTML Academy</span>
+            HTML Academy
           </a>
         </li>
       </ul>
       <a href="./index.html" class="nav__logo-link">
+        <span class="visually-hidden">Логотип Седоны</span>
         <svg class="nav__logo" width="185" height="96">
           <use xlink:href="./img/icons/sprite.svg#logo"></use>
         </svg>
@@ -51,14 +53,13 @@
 
   <main class="main-container">
     <h1 class="visually-hidden">Каталог фото и видео</h1>
-
     <section class="intro container">
+      <h2 class="visually-hidden">Интро</h2>
       <picture>
         <source media="(min-width: 1200px)" srcset="./img/icons/text-sedona-desktop.svg">
         <img src="./img/icons/text-sedona.svg" alt="Седона, я люблю тебя!" class="intro__icon ">
       </picture>
     </section>
-
     <section class="photos">
       <header class="photos__header photos-header">
         <h2 class="photos-header__title title">Фото и видео</h2>
@@ -73,7 +74,7 @@
                 srcset="./img/catalog/desktop/photo-1-desktop.webp 1x, ./img/catalog/desktop/photo-1-desktop@2x.webp 2x">
               <source media="(min-width: 768px)"
                 srcset="./img/catalog/tablet/photo-1-desktop.webp 1x, ./img/catalog/tablet/photo-1-desktop@2x.webp 2x">
-              <source
+              <source media="(max-width: 320px)"
                 srcset="./img/catalog/mobile/photo-1-mobile.webp 1x, ./img/catalog/mobile/photo-1-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)"
                 srcset="./img/catalog/desktop/photo-1-desktop.jpg 1x, ./img/catalog/desktop/photo-1-desktop@2x.jpg 2x">
@@ -88,7 +89,7 @@
                 <p class="photo-description__author">Автор фото: Борис</p>
               </div>
               <div class="photo-description__like-wrapper">
-                <button class="photo-description__button"></button>
+                <span class="photo-description__button"></span>
                 <span class="photo-description__like-count">1350</span>
               </div>
             </div>
@@ -101,7 +102,7 @@
                 srcset="./img/catalog/desktop/photo-2-desktop.webp 1x, ./img/catalog/desktop/photo-2-desktop@2x.webp 2x">
               <source media="(min-width: 768px)"
                 srcset="./img/catalog/tablet/photo-2-desktop.webp 1x, ./img/catalog/tablet/photo-2-desktop@2x.webp 2x">
-              <source
+              <source media="(max-width: 320px)"
                 srcset="./img/catalog/mobile/photo-2-mobile.webp 1x, ./img/catalog/mobile/photo-2-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)"
                 srcset="./img/catalog/desktop/photo-2-desktop.jpg 1x, ./img/catalog/desktop/photo-2-desktop@2x.jpg 2x">
@@ -116,7 +117,7 @@
                 <p class="photo-description__author">Автор фото: Сергей</p>
               </div>
               <div class="photo-description__like-wrapper">
-                <button class="photo-description__button"></button>
+                <span class="photo-description__button"></span>
                 <span class="photo-description__like-count">143</span>
               </div>
             </div>
@@ -129,7 +130,7 @@
                 srcset="./img/catalog/desktop/photo-3-desktop.webp 1x, ./img/catalog/desktop/photo-3-desktop@2x.webp 2x">
               <source media="(min-width: 768px)"
                 srcset="./img/catalog/tablet/photo-3-desktop.webp 1x, ./img/catalog/tablet/photo-3-desktop@2x.webp 2x">
-              <source
+              <source media="(max-width: 320px)"
                 srcset="./img/catalog/mobile/photo-3-mobile.webp 1x, ./img/catalog/mobile/photo-3-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)"
                 srcset="./img/catalog/desktop/photo-3-desktop.jpg 1x, ./img/catalog/desktop/photo-3-desktop@2x.jpg 2x">
@@ -144,7 +145,7 @@
                 <p class="photo-description__author">Автор фото: Петр</p>
               </div>
               <div class="photo-description__like-wrapper">
-                <button class="photo-description__button"></button>
+                <span class="photo-description__button"></span>
                 <span class="photo-description__like-count">96</span>
               </div>
             </div>
@@ -157,7 +158,7 @@
                 srcset="./img/catalog/desktop/photo-4-desktop.webp 1x, ./img/catalog/desktop/photo-4-desktop@2x.webp 2x">
               <source media="(min-width: 768px)"
                 srcset="./img/catalog/tablet/photo-4-desktop.webp 1x, ./img/catalog/tablet/photo-4-desktop@2x.webp 2x">
-              <source
+              <source media="(max-width: 320px)"
                 srcset="./img/catalog/mobile/photo-4-mobile.webp 1x, ./img/catalog/mobile/photo-4-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)"
                 srcset="./img/catalog/desktop/photo-4-desktop.jpg 1x, ./img/catalog/desktop/photo-4-desktop@2x.jpg 2x">
@@ -172,7 +173,7 @@
                 <p class="photo-description__author">Автор фото: Антон</p>
               </div>
               <div class="photo-description__like-wrapper">
-                <button class="photo-description__button"></button>
+                <span class="photo-description__button"></span>
                 <span class="photo-description__like-count">254</span>
               </div>
             </div>
@@ -180,7 +181,6 @@
         </li>
       </ul>
     </section>
-
     <section class="presentation">
       <div class="presentation__wrapper">
         <h2 class="presentation__title title">Все еще сомневаетесь?</h2>
@@ -195,7 +195,8 @@
               srcset="./img/catalog/desktop/video-desktop.webp 1x, ./img/catalog/desktop/video-desktop@2x.webp 2x">
             <source media="(min-width: 768px)"
               srcset="./img/catalog/tablet/video-desktop.webp 1x, ./img/catalog/tablet/video-desktop@2x.webp 2x">
-            <source srcset="./img/catalog/mobile/video-mobile.webp 1x, ./img/catalog/mobile/video-mobile@2x.webp 2x">
+            <source media="(max-width: 320px)"
+              srcset="./img/catalog/mobile/video-mobile.webp 1x, ./img/catalog/mobile/video-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)"
               srcset="./img/catalog/desktop/video-desktop.jpg 1x, ./img/catalog/desktop/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
@@ -218,17 +219,17 @@
         <ul class="footer-item__list">
           <li class="footer-item__social">
             <a href="https://vk.ru/feed" class="footer-item__link footer-item__link--vk">
-              <span class="social__text visually-hidden">Вконтакте</span>
+              <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="footer-item__social">
-            <a href="#" class="footer-item__link footer-item__link--telegram" >
-              <span class="social__text visually-hidden">Telegram</span>
+            <a href="#" class="footer-item__link footer-item__link--telegram">
+              <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-item__social">
             <a href="#" class="footer-item__link footer-item__link--youtube">
-              <span class="social__text visually-hidden">Youtube</span>
+              <span class="visually-hidden">Youtube</span>
             </a>
           </li>
         </ul>
@@ -236,13 +237,16 @@
       <li class="footer__item footer-developer">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-developer__link">
           <span class="footer-developer__text description">Разработано</span>
-          <span class="footer-developer__logo"></span>
+          <p class="footer-developer__logo">
+            <span class="visually-hidden">Иконка HTMLAcademy</span>
+          </p>
         </a>
       </li>
     </ul>
   </footer>
 
   <script src="./js/main.js"></script>
+
 </body>
 
 </html>

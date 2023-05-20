@@ -117,7 +117,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-top: 18px;
+      margin-top: 20px;
       margin-bottom: 38px;
     }
   }
@@ -195,18 +195,22 @@
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: space-around;
-    padding: 0 12px;
+    justify-content: start;
+    padding-left: 45px;
+    padding-right: 0;
   }
 }
 
 .form__label {
   margin: 16px 0;
+
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 
   &--radio {
+    padding: 18px 0;
+
     &:nth-child(2) {
       @media (min-width: $tablet-width) {
         text-align: left;
@@ -241,12 +245,21 @@
   }
 
   &--checkbox {
+    padding: 18px 0;
+
     @media (min-width: $tablet-width) {
       min-width: calc(224px - 46px);
     }
 
     @media (min-width: $desktop-width) {
-      min-width: calc(153px - 46px);
+      min-width: 153px;
+      padding-right: 64px;
+    }
+
+    &:nth-child(4n) {
+      @media (min-width: $desktop-width) {
+        padding-right: 0;
+      }
     }
   }
 
