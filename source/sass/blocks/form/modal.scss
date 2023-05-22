@@ -2,11 +2,13 @@
   display: none;
 
   &--active {
+    @include animation(display);
     display: block;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 500;
+    box-sizing: border-box;
   }
 }
 
@@ -15,6 +17,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  box-sizing: border-box;
 }
 
 .modal__wrapper {
@@ -26,7 +29,7 @@
   background-color: $white;
   position: absolute;
   margin-top: 0;
-  margin-left: calc(100% / -2);
+  margin-left: calc(320px / -2);
   top: auto;
   bottom: 678px;
   left: 50%;

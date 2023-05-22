@@ -1,4 +1,5 @@
 const closeBtn = document.querySelector(".modal__button");
+const successBtn = document.querySelector(".modal__button--success");
 const form = document.querySelector(".form");
 const submitBtn = document.querySelector(".form__button");
 const modal = document.querySelector(".modal");
@@ -17,8 +18,15 @@ const openModal = () => {
   }
 }
 
-form.addEventListener("submit", openModal);
+form.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  openModal();
+});
 
 closeBtn.addEventListener("click", () => {
   modal.classList.remove("modal--active");
+});
+
+successBtn.addEventListener("click", () => {
+  successModal.classList.remove("modal--active");
 });
